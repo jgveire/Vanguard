@@ -52,39 +52,6 @@ namespace Vanguard.Test
         }
 
         [TestMethod]
-        public void ArgumentRange_Constructor_Float()
-        {
-            // Arrange & Act
-            ArgumentRange range = new ArgumentRange(float.MinValue, float.MaxValue);
-
-            // Assert
-            range.Minimum.Should().ShouldBeEquivalentTo(float.MinValue, because: "we supplied the constructor with float min value");
-            range.Maximum.Should().ShouldBeEquivalentTo(float.MaxValue, because: "we supplied the constructor with float max value");
-        }
-
-        [TestMethod]
-        public void ArgumentRange_Constructor_Double()
-        {
-            // Arrange & Act
-            ArgumentRange range = new ArgumentRange(double.MinValue, double.MaxValue);
-
-            // Assert
-            range.Minimum.Should().ShouldBeEquivalentTo(double.MinValue, because: "we supplied the constructor with double min value");
-            range.Maximum.Should().ShouldBeEquivalentTo(double.MaxValue, because: "we supplied the constructor with double max value");
-        }
-
-        [TestMethod]
-        public void ArgumentRange_Constructor_Decimal()
-        {
-            // Arrange & Act
-            ArgumentRange range = new ArgumentRange(decimal.MinValue, decimal.MaxValue);
-
-            // Assert
-            range.Minimum.Should().Be(decimal.MinValue, because: "we supplied the constructor with decimal min value");
-            range.Maximum.Should().Be(decimal.MaxValue, because: "we supplied the constructor with decimal max value");
-        }
-
-        [TestMethod]
         public void ArgumentRange_Equal_Operator_True()
         {
             // Arrange
@@ -159,7 +126,7 @@ namespace Vanguard.Test
         {
             // Arrange
             ArgumentRange range = new ArgumentRange(1, 2);
-            int hashCode = 1M.GetHashCode() ^ 2M.GetHashCode();
+            int hashCode = 1 ^ 2;
 
             // Act
             int result = range.GetHashCode();
@@ -228,48 +195,6 @@ namespace Vanguard.Test
         {
             // Arrange
             long value = 5;
-            ArgumentRange range = new ArgumentRange(0, 10);
-
-            // Act
-            bool result = range.ValueInRange(value);
-
-            // Assert
-            result.Should().BeTrue(because: "we supplied a parameter value in the range");
-        }
-
-        [TestMethod]
-        public void ArgumentRange_ValueInRange_Float()
-        {
-            // Arrange
-            float value = 5;
-            ArgumentRange range = new ArgumentRange(0, 10);
-
-            // Act
-            bool result = range.ValueInRange(value);
-
-            // Assert
-            result.Should().BeTrue(because: "we supplied a parameter value in the range");
-        }
-
-        [TestMethod]
-        public void ArgumentRange_ValueInRange_Double()
-        {
-            // Arrange
-            double value = 5;
-            ArgumentRange range = new ArgumentRange(0, 10);
-
-            // Act
-            bool result = range.ValueInRange(value);
-
-            // Assert
-            result.Should().BeTrue(because: "we supplied a parameter value in the range");
-        }
-
-        [TestMethod]
-        public void ArgumentRange_ValueInRange_Decimal()
-        {
-            // Arrange
-            decimal value = 5;
             ArgumentRange range = new ArgumentRange(0, 10);
 
             // Act
