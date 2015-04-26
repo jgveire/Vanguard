@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vanguard", "Vanguard\Vanguard.csproj", "{AB1876C5-2E07-403E-B105-4F687BDECD3E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vanguard.Portable", "Vanguard.Portable\Vanguard.Portable.csproj", "{AB1876C5-2E07-403E-B105-4F687BDECD3E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vanguard.Test", "Vanguard.Test\Vanguard.Test.csproj", "{929BD244-A450-4493-95F8-3C06E43EEA18}"
 EndProject
@@ -14,18 +14,55 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7FFEE6
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Vanguard.Shared", "Vanguard.Shared\Vanguard.Shared.shproj", "{C87A4D95-68B8-42ED-AF76-D10F790ABF99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vanguard.Net20", "Vanguard.Net20\Vanguard.Net20.csproj", "{403C9ADF-6B4B-4CF9-A105-A0E2C4C4EE99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B541F5A2-40AD-4138-A609-41FAF648229A}"
+	ProjectSection(SolutionItems) = preProject
+		Settings.StyleCop = Settings.StyleCop
+		Vanguard.pfx = Vanguard.pfx
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vanguard.Net40", "Vanguard.Net40\Vanguard.Net40.csproj", "{6CEC10F6-8EDC-48AC-B8F1-BDF6F58129F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vanguard.Net45", "Vanguard.Net45\Vanguard.Net45.csproj", "{6B28CBBA-2E4D-4A4D-9A1D-6F76FEF202C3}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Vanguard.Shared\Vanguard.Shared.projitems*{403c9adf-6b4b-4cf9-a105-a0e2c4c4ee99}*SharedItemsImports = 4
+		Vanguard.Shared\Vanguard.Shared.projitems*{ab1876c5-2e07-403e-b105-4f687bdecd3e}*SharedItemsImports = 4
+		Vanguard.Shared\Vanguard.Shared.projitems*{6b28cbba-2e4d-4a4d-9a1d-6f76fef202c3}*SharedItemsImports = 4
+		Vanguard.Shared\Vanguard.Shared.projitems*{6cec10f6-8edc-48ac-b8f1-bdf6f58129f8}*SharedItemsImports = 4
+		Vanguard.Shared\Vanguard.Shared.projitems*{c87a4d95-68b8-42ed-af76-d10f790abf99}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 3
+		SccNumberOfProjects = 8
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs37
-		SccProjectUniqueName0 = Vanguard.Test\\Vanguard.Test.csproj
-		SccProjectName0 = Vanguard.Test
-		SccLocalPath0 = Vanguard.Test
-		SccProjectUniqueName1 = Vanguard\\Vanguard.csproj
-		SccProjectName1 = Vanguard
-		SccLocalPath1 = Vanguard
-		SccLocalPath2 = .
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Vanguard.Test\\Vanguard.Test.csproj
+		SccProjectName1 = Vanguard.Test
+		SccLocalPath1 = Vanguard.Test
+		SccProjectUniqueName2 = Vanguard.Shared\\Vanguard.Shared.shproj
+		SccProjectName2 = Vanguard.Shared
+		SccLocalPath2 = Vanguard.Shared
+		SccProjectUniqueName3 = Vanguard.Shared\\Vanguard.Shared.projitems
+		SccProjectTopLevelParentUniqueName3 = Vanguard.Shared\\Vanguard.Shared.shproj
+		SccProjectName3 = Vanguard.Shared
+		SccLocalPath3 = Vanguard.Shared
+		SccProjectUniqueName4 = Vanguard.Net20\\Vanguard.Net20.csproj
+		SccProjectName4 = Vanguard.Net20
+		SccLocalPath4 = Vanguard.Net20
+		SccProjectUniqueName5 = Vanguard.Portable\\Vanguard.Portable.csproj
+		SccProjectName5 = Vanguard.Portable
+		SccLocalPath5 = Vanguard.Portable
+		SccProjectUniqueName6 = Vanguard.Net40\\Vanguard.Net40.csproj
+		SccProjectName6 = Vanguard.Net40
+		SccLocalPath6 = Vanguard.Net40
+		SccProjectUniqueName7 = Vanguard.Net45\\Vanguard.Net45.csproj
+		SccProjectName7 = Vanguard.Net45
+		SccLocalPath7 = Vanguard.Net45
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +77,18 @@ Global
 		{929BD244-A450-4493-95F8-3C06E43EEA18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{929BD244-A450-4493-95F8-3C06E43EEA18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{929BD244-A450-4493-95F8-3C06E43EEA18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{403C9ADF-6B4B-4CF9-A105-A0E2C4C4EE99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{403C9ADF-6B4B-4CF9-A105-A0E2C4C4EE99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{403C9ADF-6B4B-4CF9-A105-A0E2C4C4EE99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{403C9ADF-6B4B-4CF9-A105-A0E2C4C4EE99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CEC10F6-8EDC-48AC-B8F1-BDF6F58129F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CEC10F6-8EDC-48AC-B8F1-BDF6F58129F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CEC10F6-8EDC-48AC-B8F1-BDF6F58129F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CEC10F6-8EDC-48AC-B8F1-BDF6F58129F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B28CBBA-2E4D-4A4D-9A1D-6F76FEF202C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B28CBBA-2E4D-4A4D-9A1D-6F76FEF202C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B28CBBA-2E4D-4A4D-9A1D-6F76FEF202C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B28CBBA-2E4D-4A4D-9A1D-6F76FEF202C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

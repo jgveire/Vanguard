@@ -79,9 +79,9 @@
     <None Include="Settings.StyleCop" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Vanguard\Vanguard.csproj">
+    <ProjectReference Include="..\Vanguard.Portable\Vanguard.Portable.csproj">
       <Project>{ab1876c5-2e07-403e-b105-4f687bdecd3e}</Project>
-      <Name>Vanguard</Name>
+      <Name>Vanguard.Portable</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
