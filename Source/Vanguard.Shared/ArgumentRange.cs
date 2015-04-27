@@ -24,6 +24,39 @@ namespace Vanguard
         /// </summary>
         /// <param name="minimum">The minimum value of an argument.</param>
         /// <param name="maximum">The maximum value of an argument.</param>
+        public ArgumentRange(byte minimum, byte maximum)
+        {
+            Minimum = minimum;
+            Maximum = maximum;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ArgumentRange"/> struct.
+        /// </summary>
+        /// <param name="minimum">The minimum value of an argument.</param>
+        /// <param name="maximum">The maximum value of an argument.</param>
+        public ArgumentRange(short minimum, short maximum)
+        {
+            Minimum = minimum;
+            Maximum = maximum;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ArgumentRange"/> struct.
+        /// </summary>
+        /// <param name="minimum">The minimum value of an argument.</param>
+        /// <param name="maximum">The maximum value of an argument.</param>
+        public ArgumentRange(int minimum, int maximum)
+        {
+            Minimum = minimum;
+            Maximum = maximum;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ArgumentRange"/> struct.
+        /// </summary>
+        /// <param name="minimum">The minimum value of an argument.</param>
+        /// <param name="maximum">The maximum value of an argument.</param>
         public ArgumentRange(long minimum, long maximum)
         {
             Minimum = minimum;
@@ -113,7 +146,55 @@ namespace Vanguard
         /// <returns>
         /// <c>true</c> if the supplied value is in the range, otherwise <c>false</c>.
         /// </returns>
+        public bool ValueInRange(byte value)
+        {
+            return InternalValueInRange(value);
+        }
+
+        /// <summary>
+        /// Determines if the supplied value is in the range.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns>
+        /// <c>true</c> if the supplied value is in the range, otherwise <c>false</c>.
+        /// </returns>
+        public bool ValueInRange(short value)
+        {
+            return InternalValueInRange(value);
+        }
+
+        /// <summary>
+        /// Determines if the supplied value is in the range.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns>
+        /// <c>true</c> if the supplied value is in the range, otherwise <c>false</c>.
+        /// </returns>
+        public bool ValueInRange(int value)
+        {
+            return InternalValueInRange(value);
+        }
+
+        /// <summary>
+        /// Determines if the supplied value is in the range.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns>
+        /// <c>true</c> if the supplied value is in the range, otherwise <c>false</c>.
+        /// </returns>
         public bool ValueInRange(long value)
+        {
+            return InternalValueInRange(value);
+        }
+
+        /// <summary>
+        /// Determines if the supplied value is in the range.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns>
+        /// <c>true</c> if the supplied value is in the range, otherwise <c>false</c>.
+        /// </returns>
+        private bool InternalValueInRange(decimal value)
         {
             return value >= Minimum && value <= Maximum;
         }
