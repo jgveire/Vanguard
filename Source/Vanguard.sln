@@ -28,16 +28,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vanguard.Net40", "Vanguard.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vanguard.Net45", "Vanguard.Net45\Vanguard.Net45.csproj", "{6B28CBBA-2E4D-4A4D-9A1D-6F76FEF202C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vanguard.Net35", "Vanguard.Net35\Vanguard.Net35.csproj", "{BFB575F3-A159-4A2D-91AD-E6CF82C690A9}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Vanguard.Shared\Vanguard.Shared.projitems*{403c9adf-6b4b-4cf9-a105-a0e2c4c4ee99}*SharedItemsImports = 4
 		Vanguard.Shared\Vanguard.Shared.projitems*{ab1876c5-2e07-403e-b105-4f687bdecd3e}*SharedItemsImports = 4
+		Vanguard.Shared\Vanguard.Shared.projitems*{bfb575f3-a159-4a2d-91ad-e6cf82c690a9}*SharedItemsImports = 4
 		Vanguard.Shared\Vanguard.Shared.projitems*{6b28cbba-2e4d-4a4d-9a1d-6f76fef202c3}*SharedItemsImports = 4
 		Vanguard.Shared\Vanguard.Shared.projitems*{6cec10f6-8edc-48ac-b8f1-bdf6f58129f8}*SharedItemsImports = 4
 		Vanguard.Shared\Vanguard.Shared.projitems*{c87a4d95-68b8-42ed-af76-d10f790abf99}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 8
+		SccNumberOfProjects = 9
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs37
 		SccLocalPath0 = .
@@ -63,6 +66,9 @@ Global
 		SccProjectUniqueName7 = Vanguard.Net45\\Vanguard.Net45.csproj
 		SccProjectName7 = Vanguard.Net45
 		SccLocalPath7 = Vanguard.Net45
+		SccProjectUniqueName8 = Vanguard.Net35\\Vanguard.Net35.csproj
+		SccProjectName8 = Vanguard.Net35
+		SccLocalPath8 = Vanguard.Net35
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,6 +95,10 @@ Global
 		{6B28CBBA-2E4D-4A4D-9A1D-6F76FEF202C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B28CBBA-2E4D-4A4D-9A1D-6F76FEF202C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B28CBBA-2E4D-4A4D-9A1D-6F76FEF202C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFB575F3-A159-4A2D-91AD-E6CF82C690A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFB575F3-A159-4A2D-91AD-E6CF82C690A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFB575F3-A159-4A2D-91AD-E6CF82C690A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFB575F3-A159-4A2D-91AD-E6CF82C690A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
