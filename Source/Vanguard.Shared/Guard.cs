@@ -51,8 +51,7 @@ namespace Vanguard
             ArgumentNotNull(value, name);
             if (string.IsNullOrEmpty(value))
             {
-                string message = string.Format(ExceptionResource.ArgumentEmptyExceptionMessage, name);
-                throw new ArgumentException(name, message);
+                throw new ArgumentException(ExceptionResource.ArgumentEmptyExceptionMessage, name);
             }
         }
 
@@ -87,8 +86,7 @@ namespace Vanguard
             ArgumentNotNull(value, name);
             if (value == Guid.Empty)
             {
-                string message = string.Format(ExceptionResource.ArgumentEmptyExceptionMessage, name);
-                throw new ArgumentException(name, message);
+                throw new ArgumentException(ExceptionResource.ArgumentEmptyExceptionMessage, name);
             }
         }
 
