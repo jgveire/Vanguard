@@ -120,16 +120,4 @@
   <data name="ArgumentEmptyExceptionMessage" xml:space="preserve">
     <value>Value can not be empty.</value>
   </data>
-  <data name="GuardEmptyExceptionMessage" xml:space="preserve">
-    <value>Exception of type 'Vanguard.GuardEmptyException' was thrown.</value>
-  </data>
-  <data name="GuardExceptionMessage" xml:space="preserve">
-    <value>Exception of type 'Vanguard.GuardException' was thrown.</value>
-  </data>
-  <data name="GuardNullExceptionMessage" xml:space="preserve">
-    <value>Exception of type 'Vanguard.GuardNullException' was thrown.</value>
-  </data>
-  <data name="GuardOutOfRangeExceptionMessage" xml:space="preserve">
-    <value>Exception of type 'Vanguard.GuardOutOfRangeException' was thrown.</value>
-  </data>
 </root>
