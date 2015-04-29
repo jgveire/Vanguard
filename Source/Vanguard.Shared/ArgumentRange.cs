@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Vanguard
+﻿namespace Vanguard
 {
     /// <summary>
     /// The argument range struct.
@@ -12,12 +8,12 @@ namespace Vanguard
         /// <summary>
         /// The minimum value of an argument.
         /// </summary>
-        public long Minimum;
+        public readonly long Minimum;
 
         /// <summary>
         /// The maximum value of an argument.
         /// </summary>
-        public long Maximum;
+        public readonly long Maximum;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ArgumentRange"/> struct.
@@ -67,8 +63,8 @@ namespace Vanguard
         /// Returns an indication whether the values of two specified <see cref="ArgumentRange"/> structs
         /// are not equal.
         /// </summary>
-        /// <param name="a">An <see cref="ArgumentRange"/> struct.</param>
-        /// <param name="b">An <see cref="ArgumentRange"/> struct.</param>
+        /// <param name="a">The first <see cref="ArgumentRange"/> to compare.</param>
+        /// <param name="b">The second <see cref="ArgumentRange"/> to compare.</param>
         /// <returns>
         /// <c>true</c> if a and b are not equal; otherwise, <c>false</c>.
         /// </returns>
@@ -81,8 +77,8 @@ namespace Vanguard
         /// Returns an indication whether the values of two specified <see cref="ArgumentRange"/> structs
         /// are equal.
         /// </summary>
-        /// <param name="a">An <see cref="ArgumentRange"/> struct.</param>
-        /// <param name="b">An <see cref="ArgumentRange"/> struct.</param>
+        /// <param name="a">The first <see cref="ArgumentRange"/> to compare.</param>
+        /// <param name="b">The second <see cref="ArgumentRange"/> to compare.</param>
         /// <returns>
         /// true if a and b are equal; otherwise, false.
         /// </returns>
@@ -194,7 +190,7 @@ namespace Vanguard
         /// <returns>
         /// <c>true</c> if the supplied value is in the range, otherwise <c>false</c>.
         /// </returns>
-        private bool InternalValueInRange(decimal value)
+        private bool InternalValueInRange(long value)
         {
             return value >= Minimum && value <= Maximum;
         }

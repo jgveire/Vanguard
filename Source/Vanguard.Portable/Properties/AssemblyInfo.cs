@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Reflection;
 using System.Resources;
-using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("Vanguard")]
 [assembly: AssemblyDescription("A small library for checking argument values.")]
@@ -10,9 +9,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyright("Copyright © Puur Software 2015")]
 [assembly: AssemblyCulture("")]
 [assembly: CLSCompliant(true)]
-[assembly: AssemblyVersion("1.0.2")]
-[assembly: AssemblyFileVersion("1.0.2")]
-[assembly: NeutralResourcesLanguageAttribute("en-US")]
+[assembly: AssemblyVersion("1.1.0")]
+[assembly: AssemblyFileVersion("1.1.0")]
+[assembly: NeutralResourcesLanguage("en-US")]
 
 #if DEBUG
 [assembly: AssemblyConfiguration("Debug")]

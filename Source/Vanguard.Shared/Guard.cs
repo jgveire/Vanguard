@@ -16,10 +16,7 @@ namespace Vanguard
         /// <exception cref="System.ArgumentNullException">Thrown when the value is null.</exception>
         public static void ArgumentNotNull(object value, string name)
         {
-            if (value == null)
-            {
-                throw new ArgumentNullException(name);
-            }
+            ArgumentNotNull(value, name, null);
         }
 
         /// <summary>
@@ -37,7 +34,7 @@ namespace Vanguard
                 throw new ArgumentNullException(name, message);
             }
         }
-
+        
         /// <summary>
         /// Ensures that a parameter value is not null or empty,
         /// otherwise an exception is thrown.
@@ -48,11 +45,7 @@ namespace Vanguard
         /// <exception cref="System.ArgumentException">Thrown when the value contains an empty string.</exception>
         public static void ArgumentNotNullOrEmpty(string value, string name)
         {
-            ArgumentNotNull(value, name);
-            if (string.IsNullOrEmpty(value))
-            {
-                throw new ArgumentException(ExceptionResource.ArgumentEmptyExceptionMessage, name);
-            }
+            ArgumentNotNullOrEmpty(value, name, null);
         }
 
         /// <summary>
@@ -83,11 +76,7 @@ namespace Vanguard
         /// /// <exception cref="System.ArgumentException">Thrown when the value contains an empty Guid.</exception>
         public static void ArgumentNotNullOrEmpty(Guid? value, string name)
         {
-            ArgumentNotNull(value, name);
-            if (value == Guid.Empty)
-            {
-                throw new ArgumentException(ExceptionResource.ArgumentEmptyExceptionMessage, name);
-            }
+            ArgumentNotNullOrEmpty(value, name, null);
         }
 
         /// <summary>
@@ -118,10 +107,7 @@ namespace Vanguard
         /// <exception cref="System.ArgumentOutOfRangeException">Thrown when the value is out of range.</exception>
         public static void ArgumentInRange(long value, string name, ArgumentRange range)
         {
-            if (!range.ValueInRange(value))
-            {
-                throw new ArgumentOutOfRangeException(name);
-            }
+            ArgumentInRange(value, name, range, null);
         }
 
         /// <summary>
@@ -138,6 +124,118 @@ namespace Vanguard
             if (!range.ValueInRange(value))
             {
                 throw new ArgumentOutOfRangeException(name, message);
+            }
+        }
+
+        /// <summary>
+        /// Ensures that a parameter value is not null,
+        /// otherwise an exception is thrown.
+        /// </summary>
+        /// <param name="value">The parameter value.</param>
+        /// <exception cref="Vanguard.GuardNullException">Thrown when the value is null.</exception>
+        public static void IsNotNull(object value)
+        {
+            IsNotNull(value, null);
+        }
+
+        /// <summary>
+        /// Ensures that a parameter value is not null,
+        /// otherwise an exception is thrown.
+        /// </summary>
+        /// <param name="value">The parameter value.</param>
+        /// <param name="message">The exception message.</param>
+        /// <exception cref="Vanguard.GuardNullException">Thrown when the value is null.</exception>
+        public static void IsNotNull(object value, string message)
+        {
+            if (value == null)
+            {
+                throw new GuardNullException(message);
+            }
+        }
+
+        /// <summary>
+        /// Ensures that a parameter value is not null or empty,
+        /// otherwise an exception is thrown.
+        /// </summary>
+        /// <param name="value">The parameter value.</param>
+        /// <exception cref="Vanguard.GuardNullException">Thrown when the value is null.</exception>
+        /// <exception cref="Vanguard.GuardEmptyException">Thrown when the value contains an empty string.</exception>
+        public static void IsNotNullOrEmpty(string value)
+        {
+            IsNotNullOrEmpty(value, null);
+        }
+
+        /// <summary>
+        /// Ensures that a parameter value is not null or empty,
+        /// otherwise an exception is thrown.
+        /// </summary>
+        /// <param name="value">The parameter value.</param>
+        /// <param name="message">The exception message.</param>
+        /// <exception cref="Vanguard.GuardNullException">Thrown when the value is null.</exception>
+        /// <exception cref="Vanguard.GuardEmptyException">Thrown when the value contains an empty string.</exception>
+        public static void IsNotNullOrEmpty(string value, string message)
+        {
+            IsNotNull(value, message);
+            if (string.IsNullOrEmpty(value))
+            {
+                throw new GuardEmptyException(message);
+            }
+        }
+
+        /// <summary>
+        /// Ensures that a parameter value is not null or empty,
+        /// otherwise an exception is thrown.
+        /// </summary>
+        /// <param name="value">The parameter value.</param>
+        /// <exception cref="Vanguard.GuardNullException">Thrown when the value is null.</exception>
+        /// <exception cref="Vanguard.GuardEmptyException">Thrown when the value contains an empty Guid.</exception>
+        public static void IsNotNullOrEmpty(Guid? value)
+        {
+            IsNotNullOrEmpty(value, null);
+        }
+
+        /// <summary>
+        /// Ensures that a parameter value is not null or empty,
+        /// otherwise an exception is thrown.
+        /// </summary>
+        /// <param name="value">The parameter value.</param>
+        /// <param name="message">The exception message.</param>
+        /// <exception cref="Vanguard.GuardNullException">Thrown when the value is null.</exception>
+        /// <exception cref="Vanguard.GuardEmptyException">Thrown when the value contains an empty Guid.</exception>
+        public static void IsNotNullOrEmpty(Guid? value, string message)
+        {
+            IsNotNull(value, message);
+            if (value == Guid.Empty)
+            {
+                throw new GuardEmptyException(message);
+            }
+        }
+
+        /// <summary>
+        /// Ensures that a parameter value is not out of range,
+        /// otherwise an exception is thrown.
+        /// </summary>
+        /// <param name="value">The parameter value.</param>
+        /// <param name="range">The range in which the parameter value should be.</param>
+        /// <exception cref="Vanguard.GuardOutOfRangeException">Thrown when the value is out of range.</exception>
+        public static void IsInRange(long value, ArgumentRange range)
+        {
+            IsInRange(value, range, null);
+        }
+
+        /// <summary>
+        /// Ensures that a parameter value is not out of range,
+        /// otherwise an exception is thrown.
+        /// </summary>
+        /// <param name="value">The parameter value.</param>
+        /// <param name="range">The range in which the parameter value should be.</param>
+        /// <param name="message">The exception message.</param>
+        /// <exception cref="Vanguard.GuardOutOfRangeException">Thrown when the value is out of range.</exception>
+        public static void IsInRange(long value, ArgumentRange range, string message)
+        {
+            if (!range.ValueInRange(value))
+            {
+                throw new GuardOutOfRangeException(message);
             }
         }
     }
