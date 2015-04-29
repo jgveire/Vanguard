@@ -28,12 +28,14 @@ namespace Vanguard.Test
         {
             // Arrange
             object value = null;
+            string exceptionMessage = "Exception of type 'Vanguard.GuardNullException' was thrown.";
 
             // Act
             Action action = () => Guard.IsNotNull(value);
 
             // Assert
-            action.ShouldThrow<GuardNullException>(because: "we supplied a null parameter value");
+            action.ShouldThrow<GuardNullException>(because: "we supplied a null parameter value")
+                  .WithMessage(exceptionMessage, because: "that is the default exception message");
         }
 
         [TestMethod]
@@ -57,12 +59,14 @@ namespace Vanguard.Test
         {
             // Arrange
             string value = null;
+            string exceptionMessage = "Exception of type 'Vanguard.GuardNullException' was thrown.";
 
             // Act
             Action action = () => Guard.IsNotNullOrEmpty(value);
 
             // Assert
-            action.ShouldThrow<GuardNullException>(because: "we supplied a null parameter value");
+            action.ShouldThrow<GuardNullException>(because: "we supplied a null parameter value")
+                  .WithMessage(exceptionMessage, because: "that is the default exception message");
         }
 
         [TestMethod]
@@ -70,12 +74,14 @@ namespace Vanguard.Test
         {
             // Arrange
             string value = string.Empty;
+            string exceptionMessage = "Exception of type 'Vanguard.GuardEmptyException' was thrown.";
 
             // Act
             Action action = () => Guard.IsNotNullOrEmpty(value);
 
             // Assert
-            action.ShouldThrow<GuardException>(because: "we supplied a null parameter value");
+            action.ShouldThrow<GuardException>(because: "we supplied a null parameter value")
+                  .WithMessage(exceptionMessage, because: "that is the default exception message");
         }
 
         [TestMethod]
@@ -99,15 +105,14 @@ namespace Vanguard.Test
         {
             // Arrange
             Guid? value = null;
-            string message = "message";
-            string exceptionMessage = "message";
+            string exceptionMessage = "Exception of type 'Vanguard.GuardNullException' was thrown.";
 
             // Act
-            Action action = () => Guard.IsNotNullOrEmpty(value, message);
+            Action action = () => Guard.IsNotNullOrEmpty(value);
 
             // Assert
             action.ShouldThrow<GuardNullException>(because: "we supplied a null parameter value")
-                  .WithMessage(exceptionMessage);
+                  .WithMessage(exceptionMessage, because: "that is the default exception message");
         }
 
         [TestMethod]
@@ -115,13 +120,14 @@ namespace Vanguard.Test
         {
             // Arrange
             Guid value = Guid.Empty;
-            string message = "message";
+            string exceptionMessage = "Exception of type 'Vanguard.GuardEmptyException' was thrown.";
 
             // Act
-            Action action = () => Guard.IsNotNullOrEmpty(value, message);
+            Action action = () => Guard.IsNotNullOrEmpty(value);
 
             // Assert
-            action.ShouldThrow<GuardException>(because: "we supplied a null parameter value");
+            action.ShouldThrow<GuardException>(because: "we supplied a null parameter value")
+                  .WithMessage(exceptionMessage, because: "that is the default exception message");
         }
 
         [TestMethod]
