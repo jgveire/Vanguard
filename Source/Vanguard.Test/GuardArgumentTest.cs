@@ -8,7 +8,7 @@ namespace Vanguard.Test
     /// The Guard test class.
     /// </summary>
     [TestClass]
-    public class GuardTest
+    public class GuardArgumentTest
     {
         [TestMethod]
         public void Guard_ArgumentNotNull_Object_NotNull()

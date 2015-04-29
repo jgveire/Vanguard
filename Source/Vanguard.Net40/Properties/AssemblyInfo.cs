@@ -12,9 +12,9 @@ using System.Runtime.InteropServices;
 [assembly: Guid("f935f687-452f-46a4-ae40-4879c096db2f")]
 [assembly: ComVisible(false)]
 [assembly: CLSCompliant(true)]
-[assembly: AssemblyVersion("1.0.2")]
-[assembly: AssemblyFileVersion("1.0.2")]
-[assembly: NeutralResourcesLanguageAttribute("en-US")]
+[assembly: AssemblyVersion("1.1.0")]
+[assembly: AssemblyFileVersion("1.1.0")]
+[assembly: NeutralResourcesLanguage("en-US")]
 
 #if DEBUG
 [assembly: AssemblyConfiguration("Debug")]

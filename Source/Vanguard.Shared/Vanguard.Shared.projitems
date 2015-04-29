@@ -17,11 +17,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)ArgumentRange.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ExceptionResource.Designer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ExceptionResource.Designer.cs">
+      <DependentUpon>ExceptionResource.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\GuardOutOfRangeException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\GuardEmptyException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\GuardNullException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\GuardException.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Guard.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)ExceptionResource.resx">
+      <LastGenOutput>ExceptionResource.Designer.cs</LastGenOutput>
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
   </ItemGroup>
