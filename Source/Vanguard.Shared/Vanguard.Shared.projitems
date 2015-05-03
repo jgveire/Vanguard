@@ -21,10 +21,10 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\GuardOutOfRangeException.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\GuardEmptyException.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\GuardNullException.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Exceptions\GuardException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\ValueEmptyException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\ValueNullException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\ValueOutOfRangeException.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Guard.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Validators\GuardValidatorGeneric.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Validators\GuardValidator.cs" />

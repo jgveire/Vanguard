@@ -10,40 +10,40 @@ namespace Vanguard
 #if !PORTABLE
     [Serializable]
 #endif
-    public class GuardOutOfRangeException : GuardException
+    public class ValueOutOfRangeException : GuardException
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="GuardOutOfRangeException"/> class.
+        /// Initializes a new instance of the <see cref="ValueOutOfRangeException"/> class.
         /// </summary>
-        public GuardOutOfRangeException()
+        public ValueOutOfRangeException()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GuardOutOfRangeException"/> class.
+        /// Initializes a new instance of the <see cref="ValueOutOfRangeException"/> class.
         /// </summary>
         /// <param name="message">The message that describes the error.</param>
-        public GuardOutOfRangeException(string message)
+        public ValueOutOfRangeException(string message)
             : base(message)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GuardOutOfRangeException"/> class.
+        /// Initializes a new instance of the <see cref="ValueOutOfRangeException"/> class.
         /// </summary>
         /// <param name="message">The message that describes the error.</param>
         /// <param name="innerException">
         /// The exception that is the cause of the current exception, or a null reference
         /// (Nothing in Visual Basic) if no inner exception is specified.
         /// </param>
-        public GuardOutOfRangeException(string message, Exception innerException)
+        public ValueOutOfRangeException(string message, Exception innerException)
             : base(message, innerException)
         {
         }
 
 #if !PORTABLE
         /// <summary>
-        /// Initializes a new instance of the <see cref="GuardOutOfRangeException"/> class
+        /// Initializes a new instance of the <see cref="ValueOutOfRangeException"/> class
         /// with serialized data.
         /// </summary>
         /// <param name="info">
@@ -54,7 +54,7 @@ namespace Vanguard
         /// The <see cref="System.Runtime.Serialization.StreamingContext"/> that contains contextual
         /// information about the source or destination.
         /// </param>
-        protected GuardOutOfRangeException(SerializationInfo info, StreamingContext context)
+        protected ValueOutOfRangeException(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {
         }
