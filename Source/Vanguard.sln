@@ -30,6 +30,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vanguard.Net45", "Vanguard.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vanguard.Net35", "Vanguard.Net35\Vanguard.Net35.csproj", "{BFB575F3-A159-4A2D-91AD-E6CF82C690A9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{52BB148E-EB88-4A60-8F56-19F35C4BC1C7}"
+	ProjectSection(SolutionItems) = preProject
+		Build\build.bat = Build\build.bat
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Vanguard.Shared\Vanguard.Shared.projitems*{403c9adf-6b4b-4cf9-a105-a0e2c4c4ee99}*SharedItemsImports = 4
