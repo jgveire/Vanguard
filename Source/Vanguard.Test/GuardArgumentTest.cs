@@ -154,11 +154,12 @@ namespace Vanguard.Test
         {
             // Arrange
             byte value = 1;
+            byte minimum = 0;
+            byte maximum = 10;
             string name = "name";
-            ArgumentRange range = new ArgumentRange(0, 10);
 
             // Act
-            Action action = () => Guard.ArgumentInRange(value, name, range);
+            Action action = () => Guard.ArgumentInRange(value, minimum, maximum, name);
 
             // Assert
             action.ShouldNotThrow<ArgumentOutOfRangeException>(because: "we supplied a parameter value in the range");
@@ -169,11 +170,12 @@ namespace Vanguard.Test
         {
             // Arrange
             byte value = 20;
+            byte minimum = 0;
+            byte maximum = 10;
             string name = "name";
-            ArgumentRange range = new ArgumentRange(0, 10);
 
             // Act
-            Action action = () => Guard.ArgumentInRange(value, name, range);
+            Action action = () => Guard.ArgumentInRange(value, minimum, maximum, name);
 
             // Assert
             action.ShouldThrow<ArgumentOutOfRangeException>(because: "we supplied a parameter value outside the range");
@@ -184,13 +186,14 @@ namespace Vanguard.Test
         {
             // Arrange
             byte value = 20;
+            byte minimum = 0;
+            byte maximum = 10;
             string name = "name";
-            ArgumentRange range = new ArgumentRange(0, 10);
             string message = "message";
             string exceptionMessage = "message\r\nParameter name: name";
 
             // Act
-            Action action = () => Guard.ArgumentInRange(value, name, range, message);
+            Action action = () => Guard.ArgumentInRange(value, minimum, maximum, name, message);
 
             // Assert
             action.ShouldThrow<ArgumentOutOfRangeException>()
@@ -202,11 +205,12 @@ namespace Vanguard.Test
         {
             // Arrange
             int value = 1;
+            int minimum = 0;
+            int maximum = 10;
             string name = "name";
-            ArgumentRange range = new ArgumentRange(0, 10);
 
             // Act
-            Action action = () => Guard.ArgumentInRange(value, name, range);
+            Action action = () => Guard.ArgumentInRange(value, minimum, maximum, name);
 
             // Assert
             action.ShouldNotThrow<ArgumentOutOfRangeException>(because: "we supplied a parameter value in the range");
@@ -217,11 +221,12 @@ namespace Vanguard.Test
         {
             // Arrange
             int value = 20;
+            int minimum = 0;
+            int maximum = 10;
             string name = "name";
-            ArgumentRange range = new ArgumentRange(0, 10);
 
             // Act
-            Action action = () => Guard.ArgumentInRange(value, name, range);
+            Action action = () => Guard.ArgumentInRange(value, minimum, maximum, name);
 
             // Assert
             action.ShouldThrow<ArgumentOutOfRangeException>(because: "we supplied a parameter value outside the range");
@@ -232,13 +237,14 @@ namespace Vanguard.Test
         {
             // Arrange
             int value = 20;
+            int minimum = 0;
+            int maximum = 10;
             string name = "name";
-            ArgumentRange range = new ArgumentRange(0, 10);
             string message = "message";
             string exceptionMessage = "message\r\nParameter name: name";
 
             // Act
-            Action action = () => Guard.ArgumentInRange(value, name, range, message);
+            Action action = () => Guard.ArgumentInRange(value, minimum, maximum, name, message);
 
             // Assert
             action.ShouldThrow<ArgumentOutOfRangeException>()
@@ -250,11 +256,12 @@ namespace Vanguard.Test
         {
             // Arrange
             short value = 1;
+            short minimum = 0;
+            short maximum = 10;
             string name = "name";
-            ArgumentRange range = new ArgumentRange(0, 10);
 
             // Act
-            Action action = () => Guard.ArgumentInRange(value, name, range);
+            Action action = () => Guard.ArgumentInRange(value, minimum, maximum, name);
 
             // Assert
             action.ShouldNotThrow<ArgumentOutOfRangeException>(because: "we supplied a parameter value in the range");
@@ -265,11 +272,12 @@ namespace Vanguard.Test
         {
             // Arrange
             short value = 20;
+            short minimum = 0;
+            short maximum = 10;
             string name = "name";
-            ArgumentRange range = new ArgumentRange(0, 10);
 
             // Act
-            Action action = () => Guard.ArgumentInRange(value, name, range);
+            Action action = () => Guard.ArgumentInRange(value, minimum, maximum, name);
 
             // Assert
             action.ShouldThrow<ArgumentOutOfRangeException>(because: "we supplied a parameter value outside the range");
@@ -280,13 +288,14 @@ namespace Vanguard.Test
         {
             // Arrange
             short value = 20;
+            short minimum = 0;
+            short maximum = 10;
             string name = "name";
-            ArgumentRange range = new ArgumentRange(0, 10);
             string message = "message";
             string exceptionMessage = "message\r\nParameter name: name";
 
             // Act
-            Action action = () => Guard.ArgumentInRange(value, name, range, message);
+            Action action = () => Guard.ArgumentInRange(value, minimum, maximum, name, message);
 
             // Assert
             action.ShouldThrow<ArgumentOutOfRangeException>()
@@ -298,11 +307,12 @@ namespace Vanguard.Test
         {
             // Arrange
             long value = 1;
+            long minimum = 0;
+            long maximum = 10;
             string name = "name";
-            ArgumentRange range = new ArgumentRange(0, 10);
 
             // Act
-            Action action = () => Guard.ArgumentInRange(value, name, range);
+            Action action = () => Guard.ArgumentInRange(value, minimum, maximum, name);
 
             // Assert
             action.ShouldNotThrow<ArgumentOutOfRangeException>(because: "we supplied a parameter value in the range");
@@ -313,11 +323,12 @@ namespace Vanguard.Test
         {
             // Arrange
             long value = 20;
+            long minimum = 0;
+            long maximum = 10;
             string name = "name";
-            ArgumentRange range = new ArgumentRange(0, 10);
 
             // Act
-            Action action = () => Guard.ArgumentInRange(value, name, range);
+            Action action = () => Guard.ArgumentInRange(value, minimum, maximum, name);
 
             // Assert
             action.ShouldThrow<ArgumentOutOfRangeException>(because: "we supplied a parameter value outside the range");
@@ -328,13 +339,14 @@ namespace Vanguard.Test
         {
             // Arrange
             long value = 20;
+            long minimum = 0;
+            long maximum = 10;
             string name = "name";
-            ArgumentRange range = new ArgumentRange(0, 10);
             string message = "message";
             string exceptionMessage = "message\r\nParameter name: name";
 
             // Act
-            Action action = () => Guard.ArgumentInRange(value, name, range, message);
+            Action action = () => Guard.ArgumentInRange(value, minimum, maximum, name, message);
 
             // Assert
             action.ShouldThrow<ArgumentOutOfRangeException>()

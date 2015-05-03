@@ -61,20 +61,11 @@ namespace Vanguard {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Value can not be empty..
+        ///   Looks up a localized string similar to Value cannot be null or empty.
         /// </summary>
-        internal static string ArgumentEmptyExceptionMessage {
+        internal static string ArgumentNullOrEmptyExceptionMessage {
             get {
-                return ResourceManager.GetString("ArgumentEmptyExceptionMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to dfg.
-        /// </summary>
-        internal static string GuardExceptionMessage {
-            get {
-                return ResourceManager.GetString("GuardExceptionMessage", resourceCulture);
+                return ResourceManager.GetString("ArgumentNullOrEmptyExceptionMessage", resourceCulture);
             }
         }
     }

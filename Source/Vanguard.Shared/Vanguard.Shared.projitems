@@ -16,7 +16,6 @@
     <Import_RootNamespace>Vanguard.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)ArgumentRange.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ExceptionResource.Designer.cs">
       <DependentUpon>ExceptionResource.resx</DependentUpon>
       <DesignTime>True</DesignTime>
@@ -27,6 +26,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Exceptions\GuardNullException.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Exceptions\GuardException.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Guard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Validators\GuardValidatorGeneric.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Validators\GuardValidator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Validators\GuidNotNullOrEmptyValidator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Validators\InRangeValidator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Validators\StringNotNullOrEmptyValidator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Validators\NotNullValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)ExceptionResource.resx">

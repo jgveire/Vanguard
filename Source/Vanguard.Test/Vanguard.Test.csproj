@@ -71,7 +71,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="ArgumentRangeTest.cs" />
     <Compile Include="GuardArgumentTest.cs" />
     <Compile Include="GuardIsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
