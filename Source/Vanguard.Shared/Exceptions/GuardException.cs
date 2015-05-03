@@ -7,6 +7,9 @@ namespace Vanguard
     /// The exception that is thrown when the <see cref="Vanguard.Guard"/> class detects 
     /// an error.
     /// </summary>
+#if !PORTABLE
+    [Serializable]
+#endif
     public class GuardException : Exception
     {
         /// <summary>

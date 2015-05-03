@@ -7,6 +7,9 @@ namespace Vanguard
     /// The exception that is thrown when the <see cref="Vanguard.Guard"/> class detects 
     /// an out of range reference.
     /// </summary>
+#if !PORTABLE
+    [Serializable]
+#endif
     public class GuardOutOfRangeException : GuardException
     {
         /// <summary>

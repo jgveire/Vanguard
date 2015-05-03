@@ -7,6 +7,9 @@ namespace Vanguard
     /// The exception that is thrown when the <see cref="Vanguard.Guard"/> class detects 
     /// an empty reference.
     /// </summary>
+#if !PORTABLE
+    [Serializable]
+#endif
     public class GuardEmptyException : GuardException
     {
         /// <summary>

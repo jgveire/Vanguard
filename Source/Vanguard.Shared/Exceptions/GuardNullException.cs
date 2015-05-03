@@ -7,6 +7,9 @@ namespace Vanguard
     /// The exception that is thrown when the <see cref="Vanguard.Guard"/> class detects 
     /// a null reference (Nothing in Visual Basic).
     /// </summary>
+#if !PORTABLE
+    [Serializable]
+#endif
     public class GuardNullException : GuardException
     {
         /// <summary>
