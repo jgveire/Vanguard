@@ -7,7 +7,7 @@ mkdir .\Output\Vanguard\lib\net20
 mkdir .\Output\Vanguard\lib\net35
 mkdir .\Output\Vanguard\lib\net40
 mkdir .\Output\Vanguard\lib\net45
-mkdir .\Output\Vanguard\lib\portable-net4+sl5+wp8+win8
+mkdir ".\Output\Vanguard\lib\portable-net4+sl5+wp8+win8"
 
 copy ..\Vanguard.Net20\bin\Release\Vanguard.dll .\Output\Vanguard\lib\net20
 copy ..\Vanguard.Net20\bin\Release\Vanguard.pdb .\Output\Vanguard\lib\net20
