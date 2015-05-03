@@ -28,13 +28,13 @@ namespace Vanguard.Test
         {
             // Arrange
             object value = null;
-            string exceptionMessage = "Exception of type 'Vanguard.GuardNullException' was thrown.";
+            string exceptionMessage = "Exception of type 'Vanguard.ValueNullException' was thrown.";
 
             // Act
             Action action = () => Guard.IsNotNull(value);
 
             // Assert
-            action.ShouldThrow<GuardNullException>(because: "we supplied a null parameter value")
+            action.ShouldThrow<ValueNullException>(because: "we supplied a null parameter value")
                   .WithMessage(exceptionMessage, because: "that is the default exception message");
         }
 
@@ -50,7 +50,7 @@ namespace Vanguard.Test
             Action action = () => Guard.IsNotNull(value, message);
 
             // Assert
-            action.ShouldThrow<GuardNullException>()
+            action.ShouldThrow<ValueNullException>()
                   .WithMessage(exceptionMessage, because: "we supplied the message as argument");
         }
 
@@ -65,7 +65,7 @@ namespace Vanguard.Test
             Action action = () => Guard.IsNotNullOrEmpty(value);
 
             // Assert
-            action.ShouldThrow<GuardNullException>(because: "we supplied a null parameter value")
+            action.ShouldThrow<ValueNullException>(because: "we supplied a null parameter value")
                   .WithMessage(exceptionMessage, because: "that is the default exception message");
         }
 
@@ -111,7 +111,7 @@ namespace Vanguard.Test
             Action action = () => Guard.IsNotNullOrEmpty(value);
 
             // Assert
-            action.ShouldThrow<GuardNullException>(because: "we supplied a null parameter value")
+            action.ShouldThrow<ValueNullException>(because: "we supplied a null parameter value")
                   .WithMessage(exceptionMessage, because: "that is the default exception message");
         }
 
@@ -173,7 +173,7 @@ namespace Vanguard.Test
             Action action = () => Guard.IsInRange(value, minimum, maximum);
 
             // Assert
-            action.ShouldThrow<GuardOutOfRangeException>(because: "we supplied a parameter value outside the range");
+            action.ShouldThrow<ValueOutOfRangeException>(because: "we supplied a parameter value outside the range");
         }
 
         [TestMethod]
@@ -190,7 +190,7 @@ namespace Vanguard.Test
             Action action = () => Guard.IsInRange(value, minimum, maximum, message);
 
             // Assert
-            action.ShouldThrow<GuardOutOfRangeException>()
+            action.ShouldThrow<ValueOutOfRangeException>()
                   .WithMessage(exceptionMessage, because: "we supplied the message as argument");
         }
 
@@ -221,7 +221,7 @@ namespace Vanguard.Test
             Action action = () => Guard.IsInRange(value, minimum, maximum);
 
             // Assert
-            action.ShouldThrow<GuardOutOfRangeException>(because: "we supplied a parameter value outside the range");
+            action.ShouldThrow<ValueOutOfRangeException>(because: "we supplied a parameter value outside the range");
         }
 
         [TestMethod]
@@ -238,7 +238,7 @@ namespace Vanguard.Test
             Action action = () => Guard.IsInRange(value, minimum, maximum, message);
 
             // Assert
-            action.ShouldThrow<GuardOutOfRangeException>()
+            action.ShouldThrow<ValueOutOfRangeException>()
                   .WithMessage(exceptionMessage, because: "we supplied the message as argument");
         }
 
@@ -269,7 +269,7 @@ namespace Vanguard.Test
             Action action = () => Guard.IsInRange(value, minimum, maximum);
 
             // Assert
-            action.ShouldThrow<GuardOutOfRangeException>(because: "we supplied a parameter value outside the range");
+            action.ShouldThrow<ValueOutOfRangeException>(because: "we supplied a parameter value outside the range");
         }
 
         [TestMethod]
@@ -286,7 +286,7 @@ namespace Vanguard.Test
             Action action = () => Guard.IsInRange(value, minimum, maximum, message);
 
             // Assert
-            action.ShouldThrow<GuardOutOfRangeException>()
+            action.ShouldThrow<ValueOutOfRangeException>()
                   .WithMessage(exceptionMessage, because: "we supplied the message as argument");
         }
 
@@ -317,7 +317,7 @@ namespace Vanguard.Test
             Action action = () => Guard.IsInRange(value, minimum, maximum);
 
             // Assert
-            action.ShouldThrow<GuardOutOfRangeException>(because: "we supplied a parameter value outside the range");
+            action.ShouldThrow<ValueOutOfRangeException>(because: "we supplied a parameter value outside the range");
         }
 
         [TestMethod]
@@ -334,7 +334,7 @@ namespace Vanguard.Test
             Action action = () => Guard.IsInRange(value, minimum, maximum, message);
 
             // Assert
-            action.ShouldThrow<GuardOutOfRangeException>()
+            action.ShouldThrow<ValueOutOfRangeException>()
                   .WithMessage(exceptionMessage, because: "we supplied the message as argument");
         }
     }
