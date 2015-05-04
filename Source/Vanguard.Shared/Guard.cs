@@ -128,24 +128,24 @@ namespace Vanguard
         }
 
         /// <summary>
-        /// Ensures that a parameter value is not null,
+        /// Ensures that a value is not null,
         /// otherwise an exception is thrown.
         /// </summary>
-        /// <param name="value">The parameter value.</param>
+        /// <param name="value">The value.</param>
         /// <exception cref="ValueNullException">Thrown when the value is null.</exception>
-        public static void IsNotNull(object value)
+        public static void ValueIsNotNull(object value)
         {
-            IsNotNull(value, null);
+            ValueIsNotNull(value, null);
         }
 
         /// <summary>
-        /// Ensures that a parameter value is not null,
+        /// Ensures that a value is not null,
         /// otherwise an exception is thrown.
         /// </summary>
-        /// <param name="value">The parameter value.</param>
+        /// <param name="value">The value.</param>
         /// <param name="message">The exception message.</param>
         /// <exception cref="ValueNullException">Thrown when the value is null.</exception>
-        public static void IsNotNull(object value, string message)
+        public static void ValueIsNotNull(object value, string message)
         {
             var validator = new NotNullValidator(value);
             var exception = new ValueNullException(message);
@@ -153,28 +153,28 @@ namespace Vanguard
         }
 
         /// <summary>
-        /// Ensures that a parameter value is not null or empty,
+        /// Ensures that a value is not null or empty,
         /// otherwise an exception is thrown.
         /// </summary>
-        /// <param name="value">The parameter value.</param>
+        /// <param name="value">The value.</param>
         /// <exception cref="ValueNullException">Thrown when the value is null.</exception>
         /// <exception cref="ValueEmptyException">Thrown when the value contains an empty string.</exception>
-        public static void IsNotNullOrEmpty(string value)
+        public static void ValueIsNotNullOrEmpty(string value)
         {
-            IsNotNullOrEmpty(value, ExceptionResource.ArgumentNullOrEmptyExceptionMessage);
+            ValueIsNotNullOrEmpty(value, ExceptionResource.ArgumentNullOrEmptyExceptionMessage);
         }
 
         /// <summary>
-        /// Ensures that a parameter value is not null or empty,
+        /// Ensures that a value is not null or empty,
         /// otherwise an exception is thrown.
         /// </summary>
-        /// <param name="value">The parameter value.</param>
+        /// <param name="value">The value.</param>
         /// <param name="message">The exception message.</param>
         /// <exception cref="ValueNullException">Thrown when the value is null.</exception>
         /// <exception cref="ValueEmptyException">Thrown when the value contains an empty string.</exception>
-        public static void IsNotNullOrEmpty(string value, string message)
+        public static void ValueIsNotNullOrEmpty(string value, string message)
         {
-            IsNotNull(value, message);
+            ValueIsNotNull(value, message);
 
             var validator = new StringNotNullOrEmptyValidator(value);
             var exception = new ValueEmptyException(message);
@@ -182,28 +182,28 @@ namespace Vanguard
         }
 
         /// <summary>
-        /// Ensures that a parameter value is not null or empty,
+        /// Ensures that a value is not null or empty,
         /// otherwise an exception is thrown.
         /// </summary>
-        /// <param name="value">The parameter value.</param>
+        /// <param name="value">The value.</param>
         /// <exception cref="ValueNullException">Thrown when the value is null.</exception>
         /// <exception cref="ValueEmptyException">Thrown when the value contains an empty Guid.</exception>
-        public static void IsNotNullOrEmpty(Guid? value)
+        public static void ValueIsNotNullOrEmpty(Guid? value)
         {
-            IsNotNullOrEmpty(value, ExceptionResource.ArgumentNullOrEmptyExceptionMessage);
+            ValueIsNotNullOrEmpty(value, ExceptionResource.ArgumentNullOrEmptyExceptionMessage);
         }
 
         /// <summary>
-        /// Ensures that a parameter value is not null or empty,
+        /// Ensures that a value is not null or empty,
         /// otherwise an exception is thrown.
         /// </summary>
-        /// <param name="value">The parameter value.</param>
+        /// <param name="value">The value.</param>
         /// <param name="message">The exception message.</param>
         /// <exception cref="ValueNullException">Thrown when the value is null.</exception>
         /// <exception cref="ValueEmptyException">Thrown when the value contains an empty Guid.</exception>
-        public static void IsNotNullOrEmpty(Guid? value, string message)
+        public static void ValueIsNotNullOrEmpty(Guid? value, string message)
         {
-            IsNotNull(value, message);
+            ValueIsNotNull(value, message);
 
             var validator = new GuidNotNullOrEmptyValidator(value);
             var exception = new ValueEmptyException(message);
@@ -211,28 +211,28 @@ namespace Vanguard
         }
 
         /// <summary>
-        /// Ensures that a parameter value is not out of range,
+        /// Ensures that a value is not out of range,
         /// otherwise an exception is thrown.
         /// </summary>
-        /// <param name="value">The parameter value.</param>
+        /// <param name="value">The value.</param>
         /// <param name="minimum">The minimum value.</param>
         /// <param name="maximum">The maximum value.</param>
         /// <exception cref="ValueOutOfRangeException">Thrown when the value is out of range.</exception>
-        public static void IsInRange(long value, long minimum, long maximum)
+        public static void ValueIsInRange(long value, long minimum, long maximum)
         {
-            IsInRange(value, minimum, maximum, null);
+            ValueIsInRange(value, minimum, maximum, null);
         }
 
         /// <summary>
-        /// Ensures that a parameter value is not out of range,
+        /// Ensures that a value is not out of range,
         /// otherwise an exception is thrown.
         /// </summary>
-        /// <param name="value">The parameter value.</param>
+        /// <param name="value">The value.</param>
         /// <param name="minimum">The minimum value.</param>
         /// <param name="maximum">The maximum value.</param>
         /// <param name="message">The exception message.</param>
         /// <exception cref="ValueOutOfRangeException">Thrown when the value is out of range.</exception>
-        public static void IsInRange(long value, long minimum, long maximum, string message)
+        public static void ValueIsInRange(long value, long minimum, long maximum, string message)
         {
             var validator = new InRangeValidator(value, minimum, maximum);
             var exception = new ValueOutOfRangeException(message);
