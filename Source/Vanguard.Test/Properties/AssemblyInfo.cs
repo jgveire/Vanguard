@@ -6,11 +6,10 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCompany("Puur Software")]
 [assembly: AssemblyProduct("Vanguard.Test")]
 [assembly: AssemblyCopyright("Copyright © Puur Software 2015")]
-[assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
 [assembly: Guid("3b9cb5c5-9eff-4951-944c-bbc916114101")]
-[assembly: AssemblyVersion("2.1.0")]
-[assembly: AssemblyFileVersion("2.1.0")]
+[assembly: AssemblyVersion("2.1.2")]
+[assembly: AssemblyFileVersion("2.1.2")]
 
 #if DEBUG
 [assembly: AssemblyConfiguration("Debug")]

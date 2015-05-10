@@ -63,9 +63,10 @@ namespace Vanguard {
         /// <summary>
         ///   Looks up a localized string similar to Value cannot be null or empty.
         /// </summary>
-        internal static string ArgumentNullOrEmptyExceptionMessage {
+        internal static string ValueNullOrEmptyExceptionMessage
+        {
             get {
-                return ResourceManager.GetString("ArgumentNullOrEmptyExceptionMessage", resourceCulture);
+                return ResourceManager.GetString("ValueNullOrEmptyExceptionMessage", resourceCulture);
             }
         }
     }

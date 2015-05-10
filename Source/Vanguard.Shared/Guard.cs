@@ -44,7 +44,7 @@ namespace Vanguard
         /// <exception cref="System.ArgumentException">Thrown when the value contains an empty string.</exception>
         public static void ArgumentNotNullOrEmpty(string value, string name)
         {
-            ArgumentNotNullOrEmpty(value, name, ExceptionResource.ArgumentNullOrEmptyExceptionMessage);
+            ArgumentNotNullOrEmpty(value, name, ExceptionResource.ValueNullOrEmptyExceptionMessage);
         }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace Vanguard
         /// /// <exception cref="System.ArgumentException">Thrown when the value contains an empty Guid.</exception>
         public static void ArgumentNotNullOrEmpty(Guid? value, string name)
         {
-            ArgumentNotNullOrEmpty(value, name, ExceptionResource.ArgumentNullOrEmptyExceptionMessage);
+            ArgumentNotNullOrEmpty(value, name, ExceptionResource.ValueNullOrEmptyExceptionMessage);
         }
 
         /// <summary>
@@ -161,7 +161,7 @@ namespace Vanguard
         /// <exception cref="ValueEmptyException">Thrown when the value contains an empty string.</exception>
         public static void ValueIsNotNullOrEmpty(string value)
         {
-            ValueIsNotNullOrEmpty(value, ExceptionResource.ArgumentNullOrEmptyExceptionMessage);
+            ValueIsNotNullOrEmpty(value, ExceptionResource.ValueNullOrEmptyExceptionMessage);
         }
 
         /// <summary>
@@ -190,7 +190,7 @@ namespace Vanguard
         /// <exception cref="ValueEmptyException">Thrown when the value contains an empty Guid.</exception>
         public static void ValueIsNotNullOrEmpty(Guid? value)
         {
-            ValueIsNotNullOrEmpty(value, ExceptionResource.ArgumentNullOrEmptyExceptionMessage);
+            ValueIsNotNullOrEmpty(value, ExceptionResource.ValueNullOrEmptyExceptionMessage);
         }
 
         /// <summary>
@@ -209,7 +209,7 @@ namespace Vanguard
             var exception = new ValueEmptyException(message);
             HandleGuard(validator, exception);
         }
-
+        
         /// <summary>
         /// Ensures that a value is not out of range,
         /// otherwise an exception is thrown.

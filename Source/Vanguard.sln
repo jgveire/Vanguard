@@ -35,6 +35,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{52BB148E
 		Build\build.bat = Build\build.bat
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vanguard.Resharper", "Vanguard.Resharper\Vanguard.Resharper.csproj", "{06CD5D9C-0AE5-496F-BD85-80730DC4909E}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Vanguard.Shared\Vanguard.Shared.projitems*{403c9adf-6b4b-4cf9-a105-a0e2c4c4ee99}*SharedItemsImports = 4
@@ -45,7 +47,7 @@ Global
 		Vanguard.Shared\Vanguard.Shared.projitems*{c87a4d95-68b8-42ed-af76-d10f790abf99}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 9
+		SccNumberOfProjects = 10
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs37
 		SccLocalPath0 = .
@@ -74,6 +76,9 @@ Global
 		SccProjectUniqueName8 = Vanguard.Net35\\Vanguard.Net35.csproj
 		SccProjectName8 = Vanguard.Net35
 		SccLocalPath8 = Vanguard.Net35
+		SccProjectUniqueName9 = Vanguard.Resharper\\Vanguard.Resharper.csproj
+		SccProjectName9 = Vanguard.Resharper
+		SccLocalPath9 = Vanguard.Resharper
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -104,6 +109,10 @@ Global
 		{BFB575F3-A159-4A2D-91AD-E6CF82C690A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFB575F3-A159-4A2D-91AD-E6CF82C690A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFB575F3-A159-4A2D-91AD-E6CF82C690A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06CD5D9C-0AE5-496F-BD85-80730DC4909E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06CD5D9C-0AE5-496F-BD85-80730DC4909E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06CD5D9C-0AE5-496F-BD85-80730DC4909E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06CD5D9C-0AE5-496F-BD85-80730DC4909E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -18,7 +18,7 @@
         /// <summary>
         /// Validates the value property.
         /// </summary>
-        /// <returns><c>true</c> when the value property is not null or empty, otherwise <c>false</c></returns>
+        /// <returns><c>true</c> when the value property is not null and not empty, otherwise <c>false</c></returns>
         public override bool Validate()
         {
             return !string.IsNullOrEmpty(Value);
