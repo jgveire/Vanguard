@@ -148,7 +148,7 @@ namespace Vanguard.Test
             action.ShouldThrow<ArgumentException>()
                   .WithMessage(exceptionMessage, because: "we supplied the message as argument");
         }
-
+        
         [TestMethod]
         public void Guard_ArgumentInRange_Byte_InRange()
         {
