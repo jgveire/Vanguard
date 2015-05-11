@@ -11,8 +11,8 @@ using System.Runtime.InteropServices;
 [assembly: Guid("f935f687-452f-46a4-ae40-4879c096db2f")]
 [assembly: ComVisible(false)]
 [assembly: CLSCompliant(true)]
-[assembly: AssemblyVersion("2.1.2")]
-[assembly: AssemblyFileVersion("2.1.2")]
+[assembly: AssemblyVersion("2.2.0")]
+[assembly: AssemblyFileVersion("2.2.0")]
 [assembly: NeutralResourcesLanguage("en-US")]
 
 #if DEBUG
