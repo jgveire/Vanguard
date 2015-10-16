@@ -11,7 +11,7 @@ namespace Vanguard.Test
     public class GuardValueTest
     {
         [TestMethod]
-        public void Guard_IsNotNull_Object_NotNull()
+        public void Guard_ValueNotNull_Object_NotNull()
         {
             // Arrange
             object value = "value";
@@ -24,11 +24,11 @@ namespace Vanguard.Test
         }
 
         [TestMethod]
-        public void Guard_IsNotNull_Object_Null()
+        public void Guard_ValueNotNull_Object_Null()
         {
             // Arrange
             object value = null;
-            string exceptionMessage = "Exception of type 'Vanguard.ValueNullException' was thrown.";
+            string exceptionMessage = "Value cannot be null.";
 
             // Act
             Action action = () => Guard.ValueNotNull(value);
@@ -39,7 +39,7 @@ namespace Vanguard.Test
         }
 
         [TestMethod]
-        public void Guard_IsNotNull_Object_Message()
+        public void Guard_ValueNotNull_Object_Message()
         {
             // Arrange
             object value = null;
@@ -55,11 +55,11 @@ namespace Vanguard.Test
         }
 
         [TestMethod]
-        public void Guard_IsNotNullOrEmpty_String_Null()
+        public void Guard_ValueNotNullOrEmpty_String_Null()
         {
             // Arrange
             string value = null;
-            string exceptionMessage = "Value cannot be null or empty.";
+            string exceptionMessage = "Value cannot be null.";
 
             // Act
             Action action = () => Guard.ValueNotNullOrEmpty(value);
@@ -70,11 +70,11 @@ namespace Vanguard.Test
         }
 
         [TestMethod]
-        public void Guard_IsNotNullOrEmpty_String_Empty()
+        public void Guard_ValueNotNullOrEmpty_String_Empty()
         {
             // Arrange
             string value = string.Empty;
-            string exceptionMessage = "Value cannot be null or empty.";
+            string exceptionMessage = "Value cannot be empty.";
 
             // Act
             Action action = () => Guard.ValueNotNullOrEmpty(value);
@@ -85,7 +85,7 @@ namespace Vanguard.Test
         }
 
         [TestMethod]
-        public void Guard_IsNotNullOrEmpty_String_Message()
+        public void Guard_ValueNotNullOrEmpty_String_Message()
         {
             // Arrange
             string value = string.Empty;
@@ -101,11 +101,11 @@ namespace Vanguard.Test
         }
 
         [TestMethod]
-        public void Guard_IsNotNullOrEmpty_Guid_Null()
+        public void Guard_ValueNotNullOrEmpty_Guid_Null()
         {
             // Arrange
             Guid? value = null;
-            string exceptionMessage = "Value cannot be null or empty.";
+            string exceptionMessage = "Value cannot be null.";
 
             // Act
             Action action = () => Guard.ValueNotNullOrEmpty(value);
@@ -116,11 +116,11 @@ namespace Vanguard.Test
         }
 
         [TestMethod]
-        public void Guard_IsNotNullOrEmpty_Guid_Empty()
+        public void Guard_ValueNotNullOrEmpty_Guid_Empty()
         {
             // Arrange
             Guid value = Guid.Empty;
-            string exceptionMessage = "Value cannot be null or empty.";
+            string exceptionMessage = "Value cannot be empty.";
 
             // Act
             Action action = () => Guard.ValueNotNullOrEmpty(value);
@@ -131,7 +131,7 @@ namespace Vanguard.Test
         }
 
         [TestMethod]
-        public void Guard_IsNotNullOrEmpty_Guid_Message()
+        public void Guard_ValueNotNullOrEmpty_Guid_Message()
         {
             // Arrange
             Guid value = Guid.Empty;
@@ -147,7 +147,7 @@ namespace Vanguard.Test
         }
 
         [TestMethod]
-        public void Guard_IsInRange_Byte_InRange()
+        public void Guard_ValueInRange_Byte_InRange()
         {
             // Arrange
             byte value = 1;
@@ -162,7 +162,7 @@ namespace Vanguard.Test
         }
 
         [TestMethod]
-        public void Guard_IsInRange_Byte_OutOfRange()
+        public void Guard_ValueInRange_Byte_OutOfRange()
         {
             // Arrange
             byte value = 20;
@@ -177,7 +177,7 @@ namespace Vanguard.Test
         }
 
         [TestMethod]
-        public void Guard_IsInRange_Byte_Message()
+        public void Guard_ValueInRange_Byte_Message()
         {
             // Arrange
             byte value = 20;
@@ -195,7 +195,7 @@ namespace Vanguard.Test
         }
 
         [TestMethod]
-        public void Guard_IsInRange_Int_InRange()
+        public void Guard_ValueInRange_Int_InRange()
         {
             // Arrange
             int value = 1;
@@ -210,7 +210,7 @@ namespace Vanguard.Test
         }
 
         [TestMethod]
-        public void Guard_IsInRange_Int_OutOfRange()
+        public void Guard_ValueInRange_Int_OutOfRange()
         {
             // Arrange
             int value = 20;
@@ -225,7 +225,7 @@ namespace Vanguard.Test
         }
 
         [TestMethod]
-        public void Guard_IsInRange_Int_Message()
+        public void Guard_ValueInRange_Int_Message()
         {
             // Arrange
             int value = 20;
@@ -243,7 +243,7 @@ namespace Vanguard.Test
         }
 
         [TestMethod]
-        public void Guard_IsInRange_Short_InRange()
+        public void Guard_ValueInRange_Short_InRange()
         {
             // Arrange
             short value = 1;
@@ -258,7 +258,7 @@ namespace Vanguard.Test
         }
 
         [TestMethod]
-        public void Guard_IsInRange_Short_OutOfRange()
+        public void Guard_ValueInRange_Short_OutOfRange()
         {
             // Arrange
             short value = 20;
@@ -273,7 +273,7 @@ namespace Vanguard.Test
         }
 
         [TestMethod]
-        public void Guard_IsInRange_Short_Message()
+        public void Guard_ValueInRange_Short_Message()
         {
             // Arrange
             short value = 20;
@@ -291,7 +291,7 @@ namespace Vanguard.Test
         }
 
         [TestMethod]
-        public void Guard_IsInRange_Long_InRange()
+        public void Guard_ValueInRange_Long_InRange()
         {
             // Arrange
             long value = 1;
@@ -306,7 +306,7 @@ namespace Vanguard.Test
         }
 
         [TestMethod]
-        public void Guard_IsInRange_Long_OutOfRange()
+        public void Guard_ValueInRange_Long_OutOfRange()
         {
             // Arrange
             long value = 20;
@@ -321,7 +321,7 @@ namespace Vanguard.Test
         }
 
         [TestMethod]
-        public void Guard_IsInRange_Long_Message()
+        public void Guard_ValueInRange_Long_Message()
         {
             // Arrange
             long value = 20;
