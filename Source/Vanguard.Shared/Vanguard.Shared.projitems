@@ -26,12 +26,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Exceptions\ValueNullException.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Exceptions\ValueOutOfRangeException.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Guard.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Validators\GuardValidatorGeneric.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Validators\GuardValidator.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Validators\GuidNotNullOrEmptyValidator.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Validators\InRangeValidator.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Validators\StringNotNullOrEmptyValidator.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Validators\NotNullValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)ExceptionResource.resx">

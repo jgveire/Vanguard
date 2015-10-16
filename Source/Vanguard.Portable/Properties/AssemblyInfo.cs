@@ -8,8 +8,8 @@ using System.Resources;
 [assembly: AssemblyProduct("Vanguard")]
 [assembly: AssemblyCopyright("Copyright © Puur Software 2015")]
 [assembly: CLSCompliant(true)]
-[assembly: AssemblyVersion("2.2.0")]
-[assembly: AssemblyFileVersion("2.2.0")]
+[assembly: AssemblyVersion("2.3.0")]
+[assembly: AssemblyFileVersion("2.3.0")]
 [assembly: NeutralResourcesLanguage("en-US")]
 
 #if DEBUG

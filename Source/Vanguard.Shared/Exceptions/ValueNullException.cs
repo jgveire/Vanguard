@@ -16,6 +16,7 @@ namespace Vanguard
         /// Initializes a new instance of the <see cref="ValueNullException"/> class.
         /// </summary>
         public ValueNullException()
+            : base(ExceptionResource.ValueNullExceptionMessage)
         {
         }
 

@@ -15,7 +15,8 @@ namespace Vanguard
         /// <summary>
         /// Initializes a new instance of the <see cref="ValueEmptyException"/> class.
         /// </summary>
-        public ValueEmptyException()
+        public ValueEmptyException() 
+            : base(ExceptionResource.ValueEmptyExceptionMessage)
         {
         }
 
