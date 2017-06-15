@@ -14,6 +14,7 @@ Vanguard supports the three most commonly used argument checks there are:
 * Argument not null
 * Argument not empty
 * Argument not out of range
+
 For more complex checks a validation library is recommended and not a guard library. 
 
 The following code show how to check whether the argument is not null. When the argument is null an ArgumentNullException will be thrown.
@@ -81,4 +82,3 @@ Guard.ValueInRange(value, 0, 10);
 // Value in range check with custom exception message.
 Guard.ValueInRange(value, 0, 10, "Custom exception message.");
 ```
-
