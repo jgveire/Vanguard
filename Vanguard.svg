@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+]>
+<svg  version="1.1" xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" width="250" height="250" viewBox="0 0 250 250"
+	overflow="visible" enable-background="new 0 0 250 250" xml:space="preserve">
+  <path id="shield-background" fill="#FFFFFF" d="M239,32.67C146.67,39,125,2.33,125,2.33s-22.33,36-114,30.33C-18,191,125,248,125,248
+        S269.33,190.67,239,32.67z"/>
+	<path id="red-bottom-shield" fill="#FF0000" d="M125,125v123c0,0,83.08-31,111.75-122.75L125,125z"/>
+	<path id="red-top-shield" fill="#FF0000" d="M11,32.67c-9.08,49.57,3.43,92.66,3.09,92.33S125,125,125,125V2.33C125,2.33,102.67,38.33,11,32.67z"/>
+	<path id="gray-border" stroke="#808080" stroke-width="4" fill="none" d="M239,32.67C146.67,39,125,2.33,125,2.33s-22.33,36-114,30.33
+			C-18,191,125,248,125,248S269.33,190.67,239,32.67z"/>
+</svg>
