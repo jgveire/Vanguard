@@ -1,18 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vanguard.Portable", "Vanguard.Portable\Vanguard.Portable.csproj", "{AB1876C5-2E07-403E-B105-4F687BDECD3E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vanguard.Test", "Vanguard.Test\Vanguard.Test.csproj", "{929BD244-A450-4493-95F8-3C06E43EEA18}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7FFEE6EA-617C-4B4A-98C0-2EA551C1FE9B}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
-	EndProjectSection
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Vanguard.Shared", "Vanguard.Shared\Vanguard.Shared.shproj", "{C87A4D95-68B8-42ED-AF76-D10F790ABF99}"
 EndProject
@@ -20,7 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vanguard.Net20", "Vanguard.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B541F5A2-40AD-4138-A609-41FAF648229A}"
 	ProjectSection(SolutionItems) = preProject
-		Settings.StyleCop = Settings.StyleCop
 		Vanguard.pfx = Vanguard.pfx
 	EndProjectSection
 EndProject
@@ -29,11 +21,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vanguard.Net45", "Vanguard.Net45\Vanguard.Net45.csproj", "{6B28CBBA-2E4D-4A4D-9A1D-6F76FEF202C3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vanguard.Net35", "Vanguard.Net35\Vanguard.Net35.csproj", "{BFB575F3-A159-4A2D-91AD-E6CF82C690A9}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{52BB148E-EB88-4A60-8F56-19F35C4BC1C7}"
-	ProjectSection(SolutionItems) = preProject
-		Build\build.bat = Build\build.bat
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vanguard.Standard", "Vanguard.Standard\Vanguard.Standard.csproj", "{81A6AC6C-A49B-48ED-A707-D21904DBEE2E}"
 EndProject
