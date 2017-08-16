@@ -1,5 +1,7 @@
 ﻿using System;
+#if !PORTABLE && !NETSTANDARD1_0
 using System.Runtime.Serialization;
+#endif
 
 namespace Vanguard
 {
@@ -7,7 +9,7 @@ namespace Vanguard
     /// The exception that is thrown when the <see cref="Vanguard.Guard"/> class detects 
     /// a null reference (Nothing in Visual Basic).
     /// </summary>
-#if !PORTABLE
+#if !PORTABLE && !NETSTANDARD1_0
     [Serializable]
 #endif
     public class ValueNullException : GuardException
@@ -42,7 +44,7 @@ namespace Vanguard
         {
         }
 
-#if !PORTABLE
+#if !PORTABLE && !NETSTANDARD1_0
         /// <summary>
         /// Initializes a new instance of the <see cref="ValueNullException"/> class
         /// with serialized data.

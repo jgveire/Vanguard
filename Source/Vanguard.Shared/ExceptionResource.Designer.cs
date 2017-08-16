@@ -10,6 +10,7 @@
 
 namespace Vanguard {
     using System;
+    using System.Reflection;
     
     
     /// <summary>

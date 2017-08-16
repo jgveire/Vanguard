@@ -1,5 +1,7 @@
 ﻿using System;
+#if !PORTABLE && !NETSTANDARD1_0
 using System.Runtime.Serialization;
+#endif
 
 namespace Vanguard
 {
@@ -7,7 +9,7 @@ namespace Vanguard
     /// The exception that is thrown when the <see cref="Vanguard.Guard"/> class detects 
     /// an out of range reference.
     /// </summary>
-#if !PORTABLE
+#if !PORTABLE && !NETSTANDARD1_0
     [Serializable]
 #endif
     public class ValueOutOfRangeException : GuardException
@@ -41,7 +43,7 @@ namespace Vanguard
         {
         }
 
-#if !PORTABLE
+#if !PORTABLE && !NETSTANDARD1_0
         /// <summary>
         /// Initializes a new instance of the <see cref="ValueOutOfRangeException"/> class
         /// with serialized data.

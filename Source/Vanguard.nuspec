@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Vanguard</id>
+    <version>2.4.0</version>
+    <title>Vanguard</title>
+    <authors>Veire Productions</authors>
+    <licenseUrl>https://github.com/jgveire/Vanguard/blob/master/License.txt</licenseUrl>
+    <projectUrl>https://github.com/jgveire/Vanguard/</projectUrl>
+    <iconUrl>https://jgveire.github.io/Vanguard/Vanguard.svg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      A simple guard library for validating method parameters without being a complete validation library.
+
+      This library makes it easy to validate method arguments in a uniform way.
+
+      The package targets multiple versions of the .NET framework: .NET 2.0, 4.0, 4.5 and has a portable version for .NET framework 4, Silverlight 5, Windows 8, Windows Phone 8.1 and Windows Phone Silverlight 8, .NET standard 1.0.
+    </description>
+    <summary>A simple guard library for validating method parameters without being a complete validation library.</summary>
+    <releaseNotes>Added a .NET Core Standard 1.0 target.</releaseNotes>
+    <copyright>Copyright Veire Productions 2017</copyright>
+    <language>en-US</language>
+    <tags>Guard Argument Parameter Validation</tags>
+  </metadata>
+  <files>
+    <file src="Vanguard.Net20\bin\Release\Vanguard.dll" target="lib\net20" />
+    <file src="Vanguard.Net20\bin\Release\Vanguard.pdb" target="lib\net20" />
+    <file src="Vanguard.Net20\bin\Release\Vanguard.xml" target="lib\net20" />
+    <file src="Vanguard.Net35\bin\Release\Vanguard.dll" target="lib\net35" />
+    <file src="Vanguard.Net35\bin\Release\Vanguard.pdb" target="lib\net35" />
+    <file src="Vanguard.Net35\bin\Release\Vanguard.xml" target="lib\net35" />
+    <file src="Vanguard.Net40\bin\Release\Vanguard.dll" target="lib\net40" />
+    <file src="Vanguard.Net40\bin\Release\Vanguard.pdb" target="lib\net40" />
+    <file src="Vanguard.Net40\bin\Release\Vanguard.xml" target="lib\net40" />
+    <file src="Vanguard.Net45\bin\Release\Vanguard.dll" target="lib\net45" />
+    <file src="Vanguard.Net45\bin\Release\Vanguard.pdb" target="lib\net45" />
+    <file src="Vanguard.Net45\bin\Release\Vanguard.xml" target="lib\net45" />
+    <file src="Vanguard.Standard\bin\Release\netstandard1.0\Vanguard.dll" target="lib\netstandard1.0" />
+    <file src="Vanguard.Standard\bin\Release\netstandard1.0\Vanguard.pdb" target="lib\netstandard1.0" />
+    <file src="Vanguard.Standard\bin\Release\netstandard1.0\Vanguard.xml" target="lib\netstandard1.0" />
+    <file src="Vanguard.Portable\bin\Release\Vanguard.dll" target="lib\portable-net4+sl5+wp8+win8" />
+    <file src="Vanguard.Portable\bin\Release\Vanguard.pdb" target="lib\portable-net4+sl5+wp8+win8" />
+    <file src="Vanguard.Portable\bin\Release\Vanguard.xml" target="lib\portable-net4+sl5+wp8+win8" />
+  </files>
+</package>
