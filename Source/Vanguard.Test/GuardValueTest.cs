@@ -229,7 +229,7 @@ namespace Vanguard.Test
         {
             // Arrange
             int value = 20;
-            int minimum = 0; 
+            int minimum = 0;
             int maximum = 10;
             string message = "message";
             string exceptionMessage = "message";
@@ -239,7 +239,7 @@ namespace Vanguard.Test
 
             // Assert
             action.ShouldThrow<ValueOutOfRangeException>()
-                  .WithMessage(exceptionMessage, because: "we supplied the message as argument");
+                .WithMessage(exceptionMessage, because: "we supplied the message as argument");
         }
 
         [TestMethod]

@@ -248,7 +248,20 @@ namespace Vanguard.Test
 
             // Assert
             action.ShouldThrow<ArgumentOutOfRangeException>()
-                  .WithMessage(exceptionMessage, because: "we supplied the message as argument");
+                .WithMessage(exceptionMessage, because: "we supplied the message as argument");
+        }
+
+        [TestMethod]
+        public void Guard_ArgumentInRange_Int_Null()
+        {
+            // Arrange
+            int? value = null;
+
+            // Act
+            Action action = () => Guard.ArgumentNotNull(value, "value");
+
+            // Assert
+            action.ShouldThrow<ArgumentNullException>();
         }
 
         [TestMethod]
