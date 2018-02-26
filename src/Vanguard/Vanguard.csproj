@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard1.0;net20;net35;net40;net45</TargetFrameworks>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>Vanguard.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>Vanguard.snk</AssemblyOriginatorKeyFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>2.5.0-alfa</Version>
     <Authors>Veire Productions</Authors>
