@@ -5,7 +5,7 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Vanguard.snk</AssemblyOriginatorKeyFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.5.0-alfa</Version>
+    <Version>3.0.0-beta</Version>
     <Authors>Veire Productions</Authors>
     <Company>Veire Productions</Company>
     <PackageLicenseUrl>https://github.com/jgveire/Vanguard/blob/master/License.txt</PackageLicenseUrl>
