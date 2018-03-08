@@ -3,14 +3,14 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard1.0;net20;net35;net40;net45</TargetFrameworks>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>Vanguard.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>Vanguard.pfx</AssemblyOriginatorKeyFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>3.0.0-beta</Version>
+    <Version>3.0.0-beta2</Version>
     <Authors>Veire Productions</Authors>
     <Company>Veire Productions</Company>
     <PackageLicenseUrl>https://github.com/jgveire/Vanguard/blob/master/License.txt</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/jgveire/Vanguard/</PackageProjectUrl>
-    <PackageIconUrl>https://jgveire.github.io/Vanguard/Vanguard.svg</PackageIconUrl>
+    <PackageIconUrl>https://jgveire.github.io/Vanguard/Vanguard.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/jgveire/Vanguard/</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <Copyright>Copyright Veire Productions 2018</Copyright>
