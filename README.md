@@ -25,6 +25,9 @@ Guard.ArgumentNotNull(value, nameof(value));
 
 // Argument not null check with custom exception message.
 Guard.ArgumentNotNull(value, nameof(value), "Custom exception message.");
+
+// Combining argument null check and setting a variable.
+_value = Guard.ArgumentNotNull(value, nameof(value));
 ``` 
 
 The following code show how to check whether the argument is not empty. When the argument is empty an ArgumentException will be thrown.
@@ -35,6 +38,9 @@ Guard.ArgumentNotNullOrEmpty(value, nameof(value));
 
 // Argument not empty check with custom exception message.
 Guard.ArgumentNotNullOrEmpty(value, nameof(value), "Custom exception message.");
+
+// Combining argument not empty check and setting a variable.
+_value = Guard.ArgumentNotNullOrEmpty(value, nameof(value));
 ```
 
 The following code show how to check whether the argument is out of range. When the argument is out of range an ArgumentOutOfRangeException will be thrown.
