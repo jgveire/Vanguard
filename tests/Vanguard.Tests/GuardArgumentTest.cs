@@ -18,7 +18,7 @@ namespace Vanguard.Test
             string name = "name";
 
             // Act
-            Action action = () => Guard.ArgumentNotNull(value, name);
+            Action action = () => Guard.ArgumentNotNull<object>(value, name);
             // Assert
             action.Should().NotThrow<ArgumentNullException>(because: "we supplied a non null parameter value");
         }
@@ -31,7 +31,7 @@ namespace Vanguard.Test
             string name = "name";
 
             // Act
-            Action action = () => Guard.ArgumentNotNull(value, name);
+            Action action = () => Guard.ArgumentNotNull<object>(value, name);
 
             // Assert
             action.Should().Throw<ArgumentNullException>(because: "we supplied a null parameter value");
@@ -47,7 +47,7 @@ namespace Vanguard.Test
             string exceptionMessage = "message\r\nParameter name: name";
 
             // Act
-            Action action = () => Guard.ArgumentNotNull(value, name, message);
+            Action action = () => Guard.ArgumentNotNull<object>(value, name, message);
 
             // Assert
             action.Should().Throw<ArgumentNullException>()
@@ -62,7 +62,7 @@ namespace Vanguard.Test
             string name = "name";
 
             // Act
-            Action action = () => Guard.ArgumentNotNullOrEmpty(value, name);
+            Action action = () => Guard.ArgumentNotNullOrEmpty<string>(value, name);
 
             // Assert
             action.Should().Throw<ArgumentException>(because: "we supplied a null parameter value");
@@ -76,7 +76,7 @@ namespace Vanguard.Test
             string name = "name";
 
             // Act
-            Action action = () => Guard.ArgumentNotNullOrEmpty(value, name);
+            Action action = () => Guard.ArgumentNotNullOrEmpty<string>(value, name);
 
             // Assert
             action.Should().Throw<ArgumentException>(because: "we supplied a null parameter value");
@@ -92,7 +92,7 @@ namespace Vanguard.Test
             string exceptionMessage = "message\r\nParameter name: name";
 
             // Act
-            Action action = () => Guard.ArgumentNotNullOrEmpty(value, name, message);
+            Action action = () => Guard.ArgumentNotNullOrEmpty<string>(value, name, message);
 
             // Assert
             action.Should().Throw<ArgumentException>()
@@ -109,7 +109,7 @@ namespace Vanguard.Test
             string exceptionMessage = "message\r\nParameter name: name";
 
             // Act
-            Action action = () => Guard.ArgumentNotNullOrEmpty(value, name, message);
+            Action action = () => Guard.ArgumentNotNullOrEmpty<Guid?>(value, name, message);
 
             // Assert
             action.Should().Throw<ArgumentNullException>(because: "we supplied a null parameter value")
@@ -125,7 +125,7 @@ namespace Vanguard.Test
             string message = "message";
 
             // Act
-            Action action = () => Guard.ArgumentNotNullOrEmpty(value, name, message);
+            Action action = () => Guard.ArgumentNotNullOrEmpty<Guid>(value, name, message);
 
             // Assert
             action.Should().Throw<ArgumentException>(because: "we supplied a null parameter value");
@@ -141,7 +141,7 @@ namespace Vanguard.Test
             string exceptionMessage = "message\r\nParameter name: name";
 
             // Act
-            Action action = () => Guard.ArgumentNotNullOrEmpty(value, name, message);
+            Action action = () => Guard.ArgumentNotNullOrEmpty<Guid>(value, name, message);
 
             // Assert
             action.Should().Throw<ArgumentException>()
