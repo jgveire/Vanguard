@@ -19,13 +19,14 @@ namespace Vanguard
         /// <param name="value">The parameter value.</param>
         /// <param name="name">Name of the parameter.</param>
         /// <exception cref="ArgumentNullException">Thrown when the value is null.</exception>
-        [Obsolete("Please make use of the generic method ArgumentNotNull<T>(T value). This method will be removed.")]
-        public static void ArgumentNotNull(object value, string name)
+        public static object ArgumentNotNull(object value, string name)
         {
             if (value == null)
             {
                 throw new ArgumentNullException(name);
             }
+
+            return value;
         }
 
         /// <summary>
@@ -36,13 +37,14 @@ namespace Vanguard
         /// <param name="name">Name of the parameter.</param>
         /// <param name="message">The exception message.</param>
         /// <exception cref="ArgumentNullException">Thrown when the value is null.</exception>
-        [Obsolete("Please make use of the generic method ArgumentNotNull<T>(T value, string name, string message). This method will be removed.")]
-        public static void ArgumentNotNull(object value, string name, string message)
+        public static object ArgumentNotNull(object value, string name, string message)
         {
             if (value == null)
             {
                 throw new ArgumentNullException(name, message);
             }
+
+            return value;
         }
 
         /// <summary>
@@ -92,21 +94,14 @@ namespace Vanguard
         /// <param name="name">Name of the parameter.</param>
         /// <exception cref="ArgumentNullException">Thrown when the value is null.</exception>
         /// <exception cref="ArgumentException">Thrown when the value contains an empty string.</exception>
-        public static TValue ArgumentNotNullOrEmpty<TValue>(TValue value, string name)
+        public static string ArgumentNotNullOrEmpty(string value, string name)
         {
+
             if (value == null)
             {
                 throw new ArgumentNullException(name);
             }
-            else if (value is string && (value as string) == string.Empty)
-            {
-                throw new ArgumentException(ExceptionResource.ValueEmptyExceptionMessage, name);
-            }
-            else if (value is Guid && (value as Guid?) == Guid.Empty)
-            {
-                throw new ArgumentException(ExceptionResource.ValueEmptyExceptionMessage, name);
-            }
-            else if (value is Guid? && (value as Guid?) == Guid.Empty)
+            else if (value == string.Empty)
             {
                 throw new ArgumentException(ExceptionResource.ValueEmptyExceptionMessage, name);
             }
@@ -118,28 +113,18 @@ namespace Vanguard
         /// Ensures that a parameter value is not null or empty,
         /// otherwise an exception is thrown.
         /// </summary>
-        /// <typeparam name="TValue">The type of the value.</typeparam>
         /// <param name="value">The parameter value.</param>
         /// <param name="name">Name of the parameter.</param>
         /// <param name="message">The exception message.</param>
-        /// <returns></returns>
         /// <exception cref="ArgumentNullException">Thrown when the value is null.</exception>
         /// <exception cref="ArgumentException">Thrown when the value contains an empty string.</exception>
-        public static TValue ArgumentNotNullOrEmpty<TValue>(TValue value, string name, string message)
+        public static string ArgumentNotNullOrEmpty(string value, string name, string message)
         {
             if (value == null)
             {
                 throw new ArgumentNullException(name, message);
             }
-            else if (value is string && (value as string) == string.Empty)
-            {
-                throw new ArgumentException(message, name);
-            }
-            else if (value is Guid && (value as Guid?) == Guid.Empty)
-            {
-                throw new ArgumentException(message, name);
-            }
-            else if (value is Guid? && (value as Guid?) == Guid.Empty)
+            else if (value == string.Empty)
             {
                 throw new ArgumentException(message, name);
             }
@@ -154,41 +139,19 @@ namespace Vanguard
         /// <param name="value">The parameter value.</param>
         /// <param name="name">Name of the parameter.</param>
         /// <exception cref="ArgumentNullException">Thrown when the value is null.</exception>
-        /// <exception cref="ArgumentException">Thrown when the value contains an empty string.</exception>
-        [Obsolete("Please make use of the generic method ArgumentNotNullOrEmpty<T>(T value, string name). This method will be removed.")]
-        public static void ArgumentNotNullOrEmpty(string value, string name)
+        /// <exception cref="ArgumentException">Thrown when the value contains an empty Guid.</exception>
+        public static Guid ArgumentNotNullOrEmpty(Guid? value, string name)
         {
-
             if (value == null)
             {
                 throw new ArgumentNullException(name);
             }
-            else if (value == string.Empty)
+            else if (value == Guid.Empty)
             {
                 throw new ArgumentException(ExceptionResource.ValueEmptyExceptionMessage, name);
             }
-        }
 
-        /// <summary>
-        /// Ensures that a parameter value is not null or empty,
-        /// otherwise an exception is thrown.
-        /// </summary>
-        /// <param name="value">The parameter value.</param>
-        /// <param name="name">Name of the parameter.</param>
-        /// <param name="message">The exception message.</param>
-        /// <exception cref="ArgumentNullException">Thrown when the value is null.</exception>
-        /// <exception cref="ArgumentException">Thrown when the value contains an empty string.</exception>
-        [Obsolete("Please make use of the generic method ArgumentNotNullOrEmpty<T>(T value, string name, string message). This method will be removed.")]
-        public static void ArgumentNotNullOrEmpty(string value, string name, string message)
-        {
-            if (value == null)
-            {
-                throw new ArgumentNullException(name, message);
-            }
-            else if (value == string.Empty)
-            {
-                throw new ArgumentException(message, name);
-            }
+            return value.Value;
         }
 
         /// <summary>
@@ -199,8 +162,7 @@ namespace Vanguard
         /// <param name="name">Name of the parameter.</param>
         /// <exception cref="ArgumentNullException">Thrown when the value is null.</exception>
         /// <exception cref="ArgumentException">Thrown when the value contains an empty Guid.</exception>
-        [Obsolete("Please make use of the generic method ArgumentNotNullOrEmpty<T>(T value, string name). This method will be removed.")]
-        public static void ArgumentNotNullOrEmpty(Guid? value, string name)
+        public static Guid ArgumentNotNullOrEmpty(Guid value, string name)
         {
             if (value == null)
             {
@@ -210,27 +172,8 @@ namespace Vanguard
             {
                 throw new ArgumentException(ExceptionResource.ValueEmptyExceptionMessage, name);
             }
-        }
 
-        /// <summary>
-        /// Ensures that a parameter value is not null or empty,
-        /// otherwise an exception is thrown.
-        /// </summary>
-        /// <param name="value">The parameter value.</param>
-        /// <param name="name">Name of the parameter.</param>
-        /// <exception cref="ArgumentNullException">Thrown when the value is null.</exception>
-        /// <exception cref="ArgumentException">Thrown when the value contains an empty Guid.</exception>
-        [Obsolete("Please make use of the generic method ArgumentNotNullOrEmpty<T>(T value, string name). This method will be removed.")]
-        public static void ArgumentNotNullOrEmpty(Guid value, string name)
-        {
-            if (value == null)
-            {
-                throw new ArgumentNullException(name);
-            }
-            else if (value == Guid.Empty)
-            {
-                throw new ArgumentException(ExceptionResource.ValueEmptyExceptionMessage, name);
-            }
+            return value;
         }
 
 #if !NET20
@@ -243,8 +186,7 @@ namespace Vanguard
         /// <param name="name">Name of the parameter.</param>
         /// <exception cref="ArgumentNullException">Thrown when the value is null.</exception>
         /// <exception cref="ArgumentException">Thrown when the value contains an empty Guid.</exception>
-        [Obsolete("Please make use of the generic method ArgumentNotNullOrEmpty<T>(T value, string name). This method will be removed.")]
-        public static void ArgumentNotNullOrEmpty<T>(IEnumerable<T> value, string name)
+        public static IEnumerable<T> ArgumentNotNullOrEmpty<T>(IEnumerable<T> value, string name)
         {
             if (value == null)
             {
@@ -254,6 +196,8 @@ namespace Vanguard
             {
                 throw new ArgumentException(ExceptionResource.ValueEmptyExceptionMessage, name);
             }
+
+            return value;
         }
 
         /// <summary>
@@ -266,8 +210,7 @@ namespace Vanguard
         /// <param name="message">The exception message.</param>
         /// <exception cref="ArgumentNullException">Thrown when the value is null.</exception>
         /// <exception cref="ArgumentException">Thrown when the value contains an empty Guid.</exception>
-        [Obsolete("Please make use of the generic method ArgumentNotNullOrEmpty<T>(T value, string name). This method will be removed.")]
-        public static void ArgumentNotNullOrEmpty<T>(IEnumerable<T> value, string name, string message)
+        public static IEnumerable<T> ArgumentNotNullOrEmpty<T>(IEnumerable<T> value, string name, string message)
         {
             if (value == null)
             {
@@ -277,6 +220,8 @@ namespace Vanguard
             {
                 throw new ArgumentException(message, name);
             }
+
+            return value;
         }
 #endif
 
@@ -289,8 +234,7 @@ namespace Vanguard
         /// <param name="message">The exception message.</param>
         /// <exception cref="ArgumentNullException">Thrown when the value is null.</exception>
         /// <exception cref="ArgumentException">Thrown when the value contains an empty Guid.</exception>
-        [Obsolete("Please make use of the generic method ArgumentNotNullOrEmpty<T>(T value, string name, string message). This method will be removed.")]
-        public static void ArgumentNotNullOrEmpty(Guid? value, string name, string message)
+        public static Guid ArgumentNotNullOrEmpty(Guid? value, string name, string message)
         {
             if (value == null)
             {
@@ -300,6 +244,8 @@ namespace Vanguard
             {
                 throw new ArgumentException(message, name);
             }
+
+            return value.Value;
         }
 
         /// <summary>
@@ -311,8 +257,7 @@ namespace Vanguard
         /// <param name="message">The exception message.</param>
         /// <exception cref="ArgumentNullException">Thrown when the value is null.</exception>
         /// <exception cref="ArgumentException">Thrown when the value contains an empty Guid.</exception>
-        [Obsolete("Please make use of the generic method ArgumentNotNullOrEmpty<T>(T value, string name, string message). This method will be removed.")]
-        public static void ArgumentNotNullOrEmpty(Guid value, string name, string message)
+        public static Guid ArgumentNotNullOrEmpty(Guid value, string name, string message)
         {
             if (value == null)
             {
@@ -322,6 +267,8 @@ namespace Vanguard
             {
                 throw new ArgumentException(message, name);
             }
+
+            return value;
         }
 
         /// <summary>

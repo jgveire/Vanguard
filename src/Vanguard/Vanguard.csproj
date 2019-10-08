@@ -5,7 +5,7 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Vanguard.pfx</AssemblyOriginatorKeyFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>3.2.0</Version>
+    <Version>4.0.0</Version>
     <Authors>Veire Productions</Authors>
     <Company>Veire Productions</Company>
     <PackageLicenseUrl>https://github.com/jgveire/Vanguard/blob/master/License.txt</PackageLicenseUrl>
@@ -17,7 +17,7 @@
     <PackageTags>Guard Argument Parameter Validation</PackageTags>
     <Description>A simple guard library for validating method parameters without being a complete validation library.
 This library makes it easy to validate method arguments in a uniform way.</Description>
-    <PackageReleaseNotes>Guards now return the supplied value for shorter notation.</PackageReleaseNotes>
+    <PackageReleaseNotes>Breaking changes: argument guards now return a value. This will break package with old references.</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
