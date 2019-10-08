@@ -1,11 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>netstandard1.0;net20;net35;net40;net45</TargetFrameworks>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Vanguard.pfx</AssemblyOriginatorKeyFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>3.0.0-beta2</Version>
+    <Version>3.0.0</Version>
     <Authors>Veire Productions</Authors>
     <Company>Veire Productions</Company>
     <PackageLicenseUrl>https://github.com/jgveire/Vanguard/blob/master/License.txt</PackageLicenseUrl>
@@ -13,7 +13,7 @@
     <PackageIconUrl>https://jgveire.github.io/Vanguard/Vanguard.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/jgveire/Vanguard/</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
-    <Copyright>Copyright Veire Productions 2018</Copyright>
+    <Copyright>Copyright Veire Productions 2019</Copyright>
     <PackageTags>Guard Argument Parameter Validation</PackageTags>
     <Description>A simple guard library for validating method parameters without being a complete validation library.
 This library makes it easy to validate method arguments in a uniform way.</Description>

@@ -579,6 +579,7 @@ namespace Vanguard
         /// <param name="value">The value.</param>
         /// <exception cref="ValueNullException">Thrown when the value is null.</exception>
         /// <exception cref="ValueEmptyException">Thrown when the value contains an empty string.</exception>
+        [Obsolete("Please make use of the generic method ValueNotNullOrEmpty<T>(T value). This method will be removed.")]
         public static void ValueNotNullOrEmpty(string value)
         {
             if (value == null)
@@ -648,6 +649,7 @@ namespace Vanguard
         /// <param name="message">The exception message.</param>
         /// <exception cref="ValueNullException">Thrown when the value is null.</exception>
         /// <exception cref="ValueEmptyException">Thrown when the value contains an empty string.</exception>
+        [Obsolete("Please make use of the generic method ValueNotNullOrEmpty<T>(T value, string message). This method will be removed.")]
         public static void ValueNotNullOrEmpty(string value, string message)
         {
             if (value == null)
@@ -667,6 +669,7 @@ namespace Vanguard
         /// <param name="value">The value.</param>
         /// <exception cref="ValueNullException">Thrown when the value is null.</exception>
         /// <exception cref="ValueEmptyException">Thrown when the value contains an empty Guid.</exception>
+        [Obsolete("Please make use of the generic method ValueNotNullOrEmpty<T>(T value). This method will be removed.")]
         public static void ValueNotNullOrEmpty(Guid? value)
         {
             if (value == null)
@@ -686,6 +689,7 @@ namespace Vanguard
         /// <param name="value">The value.</param>
         /// <exception cref="ValueNullException">Thrown when the value is null.</exception>
         /// <exception cref="ValueEmptyException">Thrown when the value contains an empty Guid.</exception>
+        [Obsolete("Please make use of the generic method ValueNotNullOrEmpty<T>(T value). This method will be removed.")]
         public static void ValueNotNullOrEmpty(Guid value)
         {
             if (value == null)
@@ -706,6 +710,7 @@ namespace Vanguard
         /// <param name="message">The exception message.</param>
         /// <exception cref="ValueNullException">Thrown when the value is null.</exception>
         /// <exception cref="ValueEmptyException">Thrown when the value contains an empty Guid.</exception>
+        [Obsolete("Please make use of the generic method ValueNotNullOrEmpty<T>(T value, string message). This method will be removed.")]
         public static void ValueNotNullOrEmpty(Guid? value, string message)
         {
             if (value == null)
@@ -726,6 +731,7 @@ namespace Vanguard
         /// <param name="message">The exception message.</param>
         /// <exception cref="ValueNullException">Thrown when the value is null.</exception>
         /// <exception cref="ValueEmptyException">Thrown when the value contains an empty Guid.</exception>
+        [Obsolete("Please make use of the generic method ValueNotNullOrEmpty<T>(T value, string message). This method will be removed.")]
         public static void ValueNotNullOrEmpty(Guid value, string message)
         {
             if (value == null)
