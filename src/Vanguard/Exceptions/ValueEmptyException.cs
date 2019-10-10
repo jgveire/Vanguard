@@ -1,23 +1,17 @@
-﻿using System;
-#if !PORTABLE && !NETSTANDARD1_0
-using System.Runtime.Serialization;
-#endif
-
-namespace Vanguard
+﻿namespace Vanguard
 {
+    using System;
+
     /// <summary>
-    /// The exception that is thrown when the <see cref="Vanguard.Guard"/> class detects 
+    /// The exception that is thrown when the <see cref="Vanguard.Guard"/> class detects
     /// an empty reference.
     /// </summary>
-#if !PORTABLE && !NETSTANDARD1_0
-    [Serializable]
-#endif
     public class ValueEmptyException : GuardException
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ValueEmptyException"/> class.
         /// </summary>
-        public ValueEmptyException() 
+        public ValueEmptyException()
             : base(ExceptionResource.ValueEmptyExceptionMessage)
         {
         }
@@ -43,24 +37,5 @@ namespace Vanguard
             : base(message, innerException)
         {
         }
-
-#if !PORTABLE && !NETSTANDARD1_0
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ValueEmptyException"/> class
-        /// with serialized data.
-        /// </summary>
-        /// <param name="info">
-        /// The <see cref="System.Runtime.Serialization.SerializationInfo"/> that holds the serialized
-        /// object data about the exception being thrown.
-        /// </param>
-        /// <param name="context">
-        /// The <see cref="System.Runtime.Serialization.StreamingContext"/> that contains contextual
-        /// information about the source or destination.
-        /// </param>
-        protected ValueEmptyException(SerializationInfo info, StreamingContext context)
-            : base(info, context)
-        {
-        }
-#endif
     }
 }

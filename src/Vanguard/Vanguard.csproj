@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.0;net20;net35;net40;net45</TargetFrameworks>
+    <TargetFrameworks>netstandard1.0</TargetFrameworks>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Vanguard.pfx</AssemblyOriginatorKeyFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>4.0.0</Version>
+    <Version>5.0.0</Version>
     <Authors>Veire Productions</Authors>
     <Company>Veire Productions</Company>
     <PackageLicenseUrl>https://github.com/jgveire/Vanguard/blob/master/License.txt</PackageLicenseUrl>

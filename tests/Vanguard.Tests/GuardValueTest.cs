@@ -62,7 +62,7 @@ namespace Vanguard.Test
             string exceptionMessage = "Value cannot be null.";
 
             // Act
-            Action action = () => Guard.ValueNotNullOrEmpty<string>(value);
+            Action action = () => Guard.ValueNotNullOrEmpty(value);
 
             // Assert
             action.Should().Throw<ValueNullException>(because: "we supplied a null parameter value")
@@ -77,7 +77,7 @@ namespace Vanguard.Test
             string exceptionMessage = "Value cannot be empty.";
 
             // Act
-            Action action = () => Guard.ValueNotNullOrEmpty<string>(value);
+            Action action = () => Guard.ValueNotNullOrEmpty(value);
 
             // Assert
             action.Should().Throw<GuardException>(because: "we supplied a null parameter value")
@@ -93,7 +93,7 @@ namespace Vanguard.Test
             string exceptionMessage = "message";
 
             // Act
-            Action action = () => Guard.ValueNotNullOrEmpty<string>(value, message);
+            Action action = () => Guard.ValueNotNullOrEmpty(value, message);
 
             // Assert
             action.Should().Throw<GuardException>()
@@ -108,7 +108,7 @@ namespace Vanguard.Test
             string exceptionMessage = "Value cannot be null.";
 
             // Act
-            Action action = () => Guard.ValueNotNullOrEmpty<Guid?>(value);
+            Action action = () => Guard.ValueNotNullOrEmpty(value);
 
             // Assert
             action.Should().Throw<ValueNullException>(because: "we supplied a null parameter value")
@@ -123,7 +123,7 @@ namespace Vanguard.Test
             string exceptionMessage = "Value cannot be empty.";
 
             // Act
-            Action action = () => Guard.ValueNotNullOrEmpty<Guid>(value);
+            Action action = () => Guard.ValueNotNullOrEmpty(value);
 
             // Assert
             action.Should().Throw<GuardException>(because: "we supplied a null parameter value")
@@ -139,7 +139,7 @@ namespace Vanguard.Test
             string exceptionMessage = "message";
 
             // Act
-            Action action = () => Guard.ValueNotNullOrEmpty<Guid>(value, message);
+            Action action = () => Guard.ValueNotNullOrEmpty(value, message);
 
             // Assert
             action.Should().Throw<GuardException>()
