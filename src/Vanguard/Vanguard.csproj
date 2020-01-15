@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.0</TargetFrameworks>
+    <TargetFrameworks>netstandard1.0;netstandard2.1</TargetFrameworks>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Vanguard.pfx</AssemblyOriginatorKeyFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>5.0.0</Version>
+    <Version>5.1.0</Version>
     <Authors>Veire Productions</Authors>
     <Company>Veire Productions</Company>
     <PackageProjectUrl>https://github.com/jgveire/Vanguard/</PackageProjectUrl>
@@ -21,10 +21,12 @@ This library makes it easy to validate method arguments in a uniform way.</Descr
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>bin\Release\netstandard1.0\Vanguard.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netstandard2.1\Vanguard.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>bin\Debug\netstandard1.0\Vanguard.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netstandard2.1\Vanguard.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>
