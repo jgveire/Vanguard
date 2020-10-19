@@ -126,7 +126,7 @@ namespace Vanguard.Test
             Action action = () => Guard.ValueNotNullOrEmpty(value);
 
             // Assert
-            action.Should().Throw<GuardException>(because: "we supplied a null parameter value")
+            action.Should().Throw<GuardException>(because: "we supplied a null parameter  value")
                   .WithMessage(exceptionMessage, because: "that is the default exception message");
         }
 
