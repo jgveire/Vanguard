@@ -1,4 +1,6 @@
-# Vanguard
+# Vanguard - DEPRICATED
+**This project has been depricated and archived. .NET has native support for single line argument checks like ArgumentNullException.ThrowIfNull. Please make use of that functionality.**
+
 A simple guard library for validation method parameters without being a complete validation library. This library makes it easy to validate method arguments in a uniform way.
 
 ## Getting Started
